@@ -1,0 +1,77 @@
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 98%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 10px;
+  }
+  
+  .search-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between; 
+    
+    margin-bottom: 20px;
+  }
+  
+  .search-results {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  .results-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+    justify-content: flex-start;
+  }
+  
+  .pagination-container {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .search-results h5 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.5rem;
+  }
+  
+  
+  .public-branch-header {
+    margin-top: 20px;
+  }
+  .no-result{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .card-content-from-bootstrap{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0.5rem 0;
+    font-size: 1 rem;
+    line-height: 1.4;
+    color: #555;
+  }
+
+  .card-content-from-bootstrap > button {
+    width: 100%;
+    margin-top: 1rem;
+  }

@@ -1,0 +1,43 @@
+﻿@page
+@using Logic
+@model Synthesis_assignment_web.Pages.LoginModel
+@{
+}
+<head>
+	<link href="~/css/login.css" rel="stylesheet" />
+</head>
+
+<body>
+	<form method="post">
+		<h2>@Model.ViewData["SignUp"]</h2>
+		<p>@Html.ValidationMessage("Unauthenticated")</p>
+		<div class="login">
+			<div class="login-screen">
+				<div class="app-title">
+					<h1>Please log in</h1>
+				</div>
+				<div class="login-form">
+					<div class="control-group">
+						<label asp-for="Credentials.Email">Name</label>
+						<input type="text" asp-for="Credentials.Email" placeholder="Your username" />
+						<span asp-validation-for="Credentials.Email" class="text-danger"></span>
+					</div>
+					<div class="control-group">
+						<label asp-for="Credentials.Password">Password</label>
+						<input type="password" asp-for="Credentials.Password" placeholder="Your password" />
+						<span asp-validation-for="Credentials.Password" class="text-danger"></span>
+					</div>
+					<div class="control-group">
+						<p>Please input true or false</p>
+						<label asp-for="Credentials.RememberMe">Remember me</label>
+						<input asp-for="Credentials.RememberMe">
+					</div>
+					<div class="control-group">
+						<button type="submit" class="button" asp-page-handler="LogIn"><span>Login</span></button>
+						<button type="submit" class="button" asp-page-handler="SignUp"><span>Sign up</span></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</body>

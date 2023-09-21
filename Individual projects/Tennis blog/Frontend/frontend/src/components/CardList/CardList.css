@@ -1,0 +1,26 @@
+.grid--large-screen {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    align-items: stretch;
+}
+
+.grid--small-screen{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: stretch;
+}
+
+.postCard {
+    grid-template-columns: max-content max-content;
+    grid-template-rows: auto;
+    padding: 2px;
+    margin: 0px;
+    border: ridge;
+}
+
+    .postCard * {
+        padding: 2px;
+        margin: 0px;
+    }

@@ -1,0 +1,1126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <help_text>// Uncomment the following line to change the fontsize and font:
+fontsize=10
+// fontfamily=SansSerif //possible: SansSerif,Serif,Monospaced
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// Welcome to UMLet!
+//
+// Double-click on elements to add them to the diagram, or to copy them
+// Edit elements by modifying the text in this panel
+// Hold Ctrl to select multiple elements
+// Use Ctrl+mouse to select via lasso
+//
+// Use +/- or Ctrl+mouse wheel to zoom
+// Drag a whole relation at its central square icon
+//
+// Press Ctrl+C to copy the whole diagram to the system clipboard (then just paste it to, eg, Word)
+// Edit the files in the "palettes" directory to create your own element palettes
+//
+// Select "Custom Elements &gt; New..." to create new element types
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// This text will be stored with each diagram;  use it for notes.</help_text>
+  <zoom_level>12</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>948</x>
+      <y>228</y>
+      <w>348</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>DbOrderHelper
+--
++ DbOrderHelper()
+--
++ GetOrders(): List&lt;OrderDTO&gt;
++ UpdateStatus(id: int, newStatus: string): void
++ Dictionary&lt;string, int&gt; GetOrdersPerTimeSlot()
++ GetOrderByID(id: int): OrderDTO
++ CreateOrder(orderDate: DateTime, orderStatus: string, total: decimal, products: List&lt;OrderProductDTO&gt;): bool
++ GetLastOrderID(): int
++ GetOrderProducts(orderId: int): List&lt;OrderProductDTO&gt;
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>84</x>
+      <y>480</y>
+      <w>480</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>ProductDTO
+--
++ ProductDTO()
++ ProductDTO(id: int, name: string, price: decimal, category: CategoryDTO, subCategory: CategoryDTO?, productStatus: string, measureUnit: string, image: string?)
+--
++ Id { get; set; }: int
++ Name { get; set; }: string
++ Price { get; set; }: decimal
++ Category { get; set; }: CategoryDTO
++ SubCategory { get; set; }: CategoryDTO?
++ ProductStatus { get; set; }: string
++ MeasureUnit { get; set; }: string
++ Image { get; set; }: string?</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1596</x>
+      <y>336</y>
+      <w>336</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>DbUserHelper
+--
++ DbUserHelper()
+--
++ GetUsers(): IEnumerable&lt;UserDTO&gt;
++ FindUser(name: string, password: string): UserDTO?
++ FindUser(name: string): UserDTO?
++ GetUserByID(id: int): UserDTO?
++ GetUserByName(name: string): UserDTO?
++ CreateUser(name: string, password: string, role: string): void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>168</x>
+      <y>732</y>
+      <w>720</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>IDbProductHelper
+--
+AddProduct(category: string, subCategory: string, status: string, name: string, price: decimal, unit: string, image: string):bool
+GetAvailableProducts(): IEnumerable&lt;ProductDTO&gt;
+GetProducts(): List&lt;ProductDTO&gt;
+GetProductsBySubCategory(subCategoryName: string):IEnumerable&lt;ProductDTO&gt;
+UpdateProduct(id: int, category: string, subCategory:string, status: string, name: string, price:decimal, unit: string, image: string?):bool
+GetProductByID(id: int): ProductDTO
+ModifyProductStatus(id: int, status: string): bool
+fg=#7209b7
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>1560</x>
+      <y>708</y>
+      <w>336</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>IDbUserHelper
+--
+GetUsers(): IEnumerable&lt;UserDTO&gt;
+FindUser(name: string, password: string): UserDTO?
+FindUser(name: string): UserDTO?
+GetUserByID(id: int): UserDTO?
+GetUserByName(name: string): UserDTO?
+CreateUser(name: string, password: string, role: string): void
+fg=#7209b7</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>84</x>
+      <y>300</y>
+      <w>480</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>DbProductHelper
+--
++ DbProductHelper()
+--
++ AddProduct(category: string, subCategory: string, status: string, name: string, price: decimal, unit: string, image: string):bool
++ GetAvailableProducts(): IEnumerable&lt;ProductDTO&gt;
++ GetProducts(): List&lt;ProductDTO&gt;
++ GetProductsBySubCategory(subCategoryName: string):IEnumerable&lt;ProductDTO&gt;
++ UpdateProduct(id: int, category: string, subCategory:string, status: string, name: string, price:decimal, unit: string, image: string?):bool
++ GetProductByID(id: int): ProductDTO
++ ModifyProductStatus(id: int, status: string): bool</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>948</x>
+      <y>420</y>
+      <w>372</w>
+      <h>336</h>
+    </coordinates>
+    <panel_attributes>OrderDTO
+--
+- id: int
+- customer: UserDTO
+- products: List&lt;OrderProductDTO&gt;
+- status: string
+- homeDelivery: HomeDeliveryDTO?
+- pickUp: PickupDeliveryDTO?
+- boughtItems: List&lt;ProductDTO&gt;
+- totalPrice: decimal
+- orderTime: string
+--
++ OrderDTO()
++ OrderDTO(customer: UserDTO, boughtItems: List&lt;ProductDTO&gt;, totalPrice: decimal, status: string, homeDelivery: HomeDeliveryDTO, orderTime: string)
++ OrderDTO(customer: UserDTO, boughtItems: List&lt;ProductDTO&gt;, totalPrice: decimal, status: string, pickUp: PickupDeliveryDTO, orderTime: string)
+--
++ Id { get; set; }: int
++ OrderTime { get; set; }: string
++ Customer { get; set; }: UserDTO
++ Products { get; set; }: List&lt;OrderProductDTO&gt;
++ ProductDTOs { get; set; }: List&lt;ProductDTO&gt;
++ HomeDelivery{ get; set; }: HomeDeliveryDTO?
++ PickupDelivery { get; set; }: PickupDeliveryDTO?
++ Total { get; set; }: decimal
++ Status { get; set; }: string
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1752</x>
+      <y>504</y>
+      <w>204</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>UserDTO
+--
++ UserDTO()
++ UserDTO(username: string, password: string, role: string)
++ UserDTO(username: string, role: string)
++ UserDTO(u: UserDTO)
+--
++ Id { get; set; }: int
++ Name { get; set; }: string
++ Password { get; set; }: string
++ Role { get; set; }: string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>528</x>
+      <y>360</y>
+      <w>132</w>
+      <h>420</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;330.0;90.0;330.0;90.0;10.0;30.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>912</x>
+      <y>336</y>
+      <w>276</w>
+      <h>456</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>210.0;360.0;10.0;360.0;10.0;10.0;30.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1716</x>
+      <y>468</y>
+      <w>36</w>
+      <h>276</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;210.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>612</x>
+      <y>1440</y>
+      <w>264</w>
+      <h>252</h>
+    </coordinates>
+    <panel_attributes>Product
+--
++ Product()
++ Product(productDTO: ProductDTO)
+--
++ Id { get; set; }: int
++ Category { get; set; }:  Category
++ SubCategory { get; set; }:  Category?
++ Name { get; set; }:  string
++ Price { get; set; }: decimal
++ MeasureUnit { get; set; }: MeasureUnit
++ Image { get; set; }: string?
+--
++ override ToString(): string
++ SetTypeStatus(type: string): ProductStatus
++ GetTypeStatus(type: ProductStatus): string
++ SetTypeUnit(type: string): MeasureUnits
++ GetTypeUnit(type: MeasureUnits): string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>600</x>
+      <y>1128</y>
+      <w>336</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>ProductManager
+--
+- products: List&lt;Product&gt;
+- readonly idbProductHelper: IDbProductHelper
+--
++ ProductManager(idbProductHelper: IDbProductHelper)
+--
++ Finder(id: int): Product
++ GetAllAvailable(): IEnumerable&lt;Product&gt;
++ GetAll(): IEnumerable&lt;Product&gt;
++ GetProductsBySubCategory(subCategoryName: string): IEnumerable&lt;Product&gt;
++ DeleteProduct(id: int): void
++ AddProduct(product: Product): void
++ ModifyProduct(product: Product): void
++ ModifyProductStatus(id: int, newStatus: string): bool
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1032</x>
+      <y>1452</y>
+      <w>312</w>
+      <h>276</h>
+    </coordinates>
+    <panel_attributes>Order
+--
++ Order()
++ Order(orderDTO: OrderDTO)
++ Order(products: List&lt;OrderProduct&gt;, total: decimal, time: string, deliveryOption: DeliveryOption)
++ Order(order: OrderDTO)
++ Order(customer: User, boughtItems: List&lt;Product&gt;, totalPrice: decimal, deliveryOption: DeliveryOption, status: string, orderTime: string)
+--
++ Id { get; set; }: int
++ Customer { get; set; }: User
++ Time { get; set; }: string
++ Products {get; set; }: List&lt;OrderProduct&gt;
++ BoughtProducts { get; set; }: List&lt;Product&gt;
++ Total { get; set; }: decimal
++ OrderStatus{get; set;}: OrderStatus
++ DeliveryOption{get; set;}: DeliveryOption
+--
++ OrderStatus SetType(type: string)
++ GetType(type: OrderStatus): string
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>936</x>
+      <y>1356</y>
+      <w>108</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>OrderStatuses
+--
+In preparation,
+Awaiting shipment,
+Shipped,
+Delivered
+bg=white
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1056</x>
+      <y>1164</y>
+      <w>420</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>OrderManager
+--
+- orders: List&lt;Order&gt;
+- OrdersPerTime: Dictionary&lt;string, int&gt;
+- readonly IdbOrderHelper: IDbOrderHelper
+--
++ OrderManager(iDbOrderHelper: IDbOrderHelper)
+--
++ GetAllOrders(): List&lt;Order&gt;
++ IsAvailableTimeslot(time: string): bool
++ AddOrder(customer: User, boughtItems: List&lt;Product&gt;, totalPrice: decimal, homeDelivery: HomeDelivery?, pickupDelivery: PickupDelivery?, status: string, orderTime: string): bool
++ GetOrder(id: int): Order
++ UpdateOrderStatus(id: int, status: string): bool</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1476</x>
+      <y>1416</y>
+      <w>264</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>User
+--
++ User(userDTO: UserDTO)
++ User()
+--
++ Id { get; set; }: int
++ Email{ get; set; }: string
++ Password{ get; set; }: string
++ Role { get; set; }: UserRoles
+--
++ SetType(type: string): UserRoles
++ GetType(type: UserRoles): string
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1512</x>
+      <y>1152</y>
+      <w>288</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>UserManager
+--
+- users: List&lt;User&gt;
+- readonly IdbUserHelper: IDbUserHelper
+- readonly emailValidation: EmailValidation
+--
++ UserManager(IdbUserHelper: IDbUserHelper)
+--
++ FindUser(name: string): User
++ CreateUser(name: string, password: string, role: UserRoles): bool
++ GetUsers(): IEnumerable&lt;UserDTO&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>1836</x>
+      <y>1440</y>
+      <w>96</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>UserRoles
+--
+Shop worker,
+Customer
+bg=white
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>12</x>
+      <y>324</y>
+      <w>96</w>
+      <h>228</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1= 1..n
+uses</panel_attributes>
+    <additional_attributes>60.0;170.0;10.0;170.0;10.0;10.0;60.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1284</x>
+      <y>276</y>
+      <w>108</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1= 1..n
+uses</panel_attributes>
+    <additional_attributes>30.0;180.0;50.0;180.0;50.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1920</x>
+      <y>360</y>
+      <w>84</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1= 1..n
+
+uses</panel_attributes>
+    <additional_attributes>30.0;120.0;30.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1248</x>
+      <y>1332</y>
+      <w>84</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1= 0..n
+manages</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>744</x>
+      <y>1332</y>
+      <w>84</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1= 0..n
+manages</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1620</x>
+      <y>1308</y>
+      <w>84</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1= 0..n
+manages</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1356</x>
+      <y>1584</y>
+      <w>324</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>OrderProduct
+--
++ OrderProduct()
++ OrderProduct(orderProductDTO: OrderProductDTO)
++ OrderProduct(product: Product, quantity: int)
+--
++ Id { get; set; }: int
++ Product { get; set; }: Product
++ Quantity { get; set; }: int
++ Price { get; set; }: decimal</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1332</x>
+      <y>1512</y>
+      <w>144</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1= 1..n
+manages</panel_attributes>
+    <additional_attributes>60.0;60.0;60.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>144</x>
+      <y>744</y>
+      <w>480</w>
+      <h>456</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>310.0;10.0;10.0;10.0;10.0;360.0;380.0;360.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1176</x>
+      <y>756</y>
+      <w>348</w>
+      <h>432</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;270.0;10.0;270.0;340.0;150.0;340.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1536</x>
+      <y>720</y>
+      <w>204</w>
+      <h>456</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>150.0;10.0;10.0;10.0;10.0;360.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>780</x>
+      <y>1680</y>
+      <w>816</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1= 1
+has</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0;660.0;60.0;660.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>492</x>
+      <y>1356</y>
+      <w>84</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>MeasureUnits
+--
+Piece,
+Kg,
+Box,
+Grams,
+Pack
+bg=white
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2004</x>
+      <y>540</y>
+      <w>312</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>CategoryDTO
+--
++ CategoryDTO()
++ CategoryDTO(name: string, parentId: int?)
++ CategoryDTO(id: int, name: string, parentId: int?)
+--
++ Id { get; set; }: int
++ Name { get; set; }: string
++ ParentId { get; set; }: int?</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2004</x>
+      <y>324</y>
+      <w>312</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>DbCategoryHelper
+--
++ CreateCategory(string name, int? parent): void
++ GetCategories(): IEnumerable&lt;CategoryDTO&gt;
++ GetSubCategories(int id): List&lt;CategoryDTO&gt;
++ UpdateCategory(CategoryDTO category): void
++ UpdateSubCategory(CategoryDTO category): void
++ GetCategoryByName(string Name): CategoryDTO
++ DeleteCategory(id: int): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2304</x>
+      <y>420</y>
+      <w>108</w>
+      <h>204</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1= 1..n
+uses</panel_attributes>
+    <additional_attributes>10.0;150.0;50.0;150.0;50.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1188</x>
+      <y>0</y>
+      <w>384</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>DbHelper
+--
+# const connStr : string = "Server=mssqlstud.fhict.local"</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1248</x>
+      <y>48</y>
+      <w>36</w>
+      <h>204</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1560</x>
+      <y>24</y>
+      <w>192</w>
+      <h>336</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;10.0;140.0;10.0;140.0;260.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1560</x>
+      <y>0</y>
+      <w>492</w>
+      <h>348</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;10.0;390.0;10.0;390.0;270.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>288</x>
+      <y>0</y>
+      <w>924</w>
+      <h>324</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>750.0;10.0;10.0;10.0;10.0;250.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>2088</x>
+      <y>708</y>
+      <w>288</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>IDbCategoryHelper
+--
+CreateCategory(string name, int? parent): void
+GetCategories(): IEnumerable&lt;CategoryDTO&gt;
+GetSubCategories(int id): List&lt;CategoryDTO&gt;
+UpdateCategory(CategoryDTO category): void
+UpdateSubCategory(CategoryDTO category): void
+GetCategoryByName(string Name): CategoryDTO
+DeleteCategory(id: int): void
+fg=#7209b7</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2160</x>
+      <y>1152</y>
+      <w>360</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>CategoryManager
+--
++ CategoryManager(IDbCategoryHelper dbCategoryHelper)
+--
++ CreateCategory(name: string, parent: int?): void
++ GetAllCategories(): List&lt;Category&gt;
++ GetSubCategories(id: int): List&lt;Category&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2184</x>
+      <y>1368</y>
+      <w>252</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>Category
+--
++ Category()
++ Category(categoryDTO: CategoryDTO)
+--
++ Id { get; set; }: int
++ Name { get; set; }: string
++ ParentId { get; set; }: int?</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1860</x>
+      <y>1152</y>
+      <w>276</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>LoginManager
+--
++ LoginManager()
+--
++ Login(name: string, password: string): User?</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1728</x>
+      <y>720</y>
+      <w>228</w>
+      <h>456</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0;170.0;360.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1860</x>
+      <y>1248</y>
+      <w>276</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>EmailValidation
+--
+--
++ static IsValidEmail(email: string): bool</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2232</x>
+      <y>720</y>
+      <w>216</w>
+      <h>456</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;10.0;160.0;360.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2220</x>
+      <y>372</y>
+      <w>216</w>
+      <h>372</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;290.0;160.0;250.0;160.0;10.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>876</x>
+      <y>744</y>
+      <w>600</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>IDbOrderHelper
+--
+GetOrders(): List&lt;OrderDTO&gt;
+UpdateStatus(id: int, newStatus: string): void
+Dictionary&lt;string, int&gt; GetOrdersPerTimeSlot()
+GetOrderByID(id: int): OrderDTO
+CreateOrder(orderDate: DateTime, orderStatus: string, total: decimal, products: List&lt;OrderProductDTO&gt;): bool
+GetLastOrderID(): int
+GetOrderProducts(orderId: int): List&lt;OrderProductDTO&gt;
+fg=#7209b7
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2316</x>
+      <y>1260</y>
+      <w>84</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1= 0..n
+manages</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>2916</x>
+      <y>1044</y>
+      <w>348</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>How do I mark that the validator is tied to the user manager 
+e.g when adding a user it validates the email
+no need for number when there is direction
+redesign enum 
+
+
+bg=yellow
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>0</x>
+      <y>2004</y>
+      <w>408</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>Is it ok if I approach the delivery option with strings for the delivery type and an delivery validation class for the business rules?
+I found out that applying the strategy pattern in this context would not make sense as there can not be more delivery types with major differences between eachother so the options will stay fixed as agreed with my client.
+
+yes it is good that I changed the approach to using strings
+I can do delivery option as enum
+
+bg=yellow
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1788</x>
+      <y>1260</y>
+      <w>96</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+uses</panel_attributes>
+    <additional_attributes>60.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1728</x>
+      <y>1476</y>
+      <w>132</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+m1= 1
+has</panel_attributes>
+    <additional_attributes>90.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>972</x>
+      <y>1428</y>
+      <w>84</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+m1= 1
+
+has</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0;50.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>516</x>
+      <y>1452</y>
+      <w>120</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+m1= 1
+
+has</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0;80.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1752</x>
+      <y>1608</y>
+      <w>360</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>DeliveryOption
+--
+- fullname: string;
+- email: string;
+--
++ DeliveryOption()
+# DeliveryOption(pickupDeliveryDTO: PickupDeliveryDTO)
+# DeliveryOption(homeDeliveryDTO: HomeDeliveryDTO)
+# DeliveryOption(fullname: string, email: string)
+--
++ Fullname { get; set; }: string
++ Email { get; set; }: string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1524</x>
+      <y>1824</y>
+      <w>360</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>HomeDelivery
+--
+- adress: string
+--
++ HomeDelivery() : base() { }
++ HomeDelivery(obj: HomeDeliveryDTO) : base(obj)
++ HomeDelivery(fullname: string, email: string, adress: string)
+--
++ Adress { get; set; }: string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1932</x>
+      <y>1824</y>
+      <w>360</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>PickupDelivery
+--
+- store: string
+--
++ PickupDelivery(): ctor
++ PickupDelivery(obj: PickupDeliveryDTO) : base(obj)
++ PickupDelivery(fullname: string, email: string, store: string)
+--
++ Store { get; set; }: string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>408</x>
+      <y>60</y>
+      <w>360</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>HomeDeliveryDTO
+--
+- fullname: string;
+- email: string;
+- adress: string;
+--
++ HomeDeliveryDTO(fullname: string, email: string, adress: string)
+--
++ Fullname { get; set; }: string
++ Email { get; set; }: string
++ Adress { get; set; }: string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1356</x>
+      <y>108</y>
+      <w>336</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>OrderProductDTO
+--
++ OrderProductDTO()
++ OrderProductDTO(id: int, product: ProductDTO, quantity: int, price: decimal)
+--
++ Id { get; set; }: int
++ Product { get; set; }: ProductDTO
++ Quantity { get; set; }: int
++ Price { get; set; }: decimal</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>816</x>
+      <y>60</y>
+      <w>360</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>PickupDeliveryDTO
+--
+- fullname: string;
+- email: string;
+- store: string;
+--
++ PickupDeliveryDTO(fullname: string, email: string, store: string)
+--
++ Fullname { get; set; }: string
++ Email { get; set; }: string
++ Store { get; set; }: string</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>816</x>
+      <y>204</y>
+      <w>156</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1= 1..n
+uses</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0;110.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>648</x>
+      <y>204</y>
+      <w>324</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1= 1..n
+uses</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0;250.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1680</x>
+      <y>1668</y>
+      <w>96</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2100</x>
+      <y>1668</y>
+      <w>84</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;10.0;50.0;130.0</additional_attributes>
+  </element>
+</diagram>

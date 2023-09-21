@@ -1,0 +1,25 @@
+.passed {
+    background-color: #4CAF50;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+
+.failed {
+    background-color: #FF0000;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+.breadcrumb-link {
+    color: black;
+}
+
+.breadcrumb-link:hover {
+    color: blue;
+}

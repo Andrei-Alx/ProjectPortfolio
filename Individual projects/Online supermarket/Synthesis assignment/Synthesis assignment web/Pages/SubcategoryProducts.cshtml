@@ -1,0 +1,20 @@
+﻿@page
+@using Logic;
+@model Synthesis_assignment_web.Pages.SubcategoryProductsModel
+@{
+}
+<div class="parent">
+	@foreach (Product p in Model.Products)
+	{
+		<div class="productcard">
+			<img src="@p.Image" width="200" height="200"/><br>
+			<span class="name">@p.Name</span>
+			<span class="price">@p.Price</span>
+			<span class="category">@p.Category.Name</span>
+			<span class="subCategory">@p.SubCategory.Name</span>
+			<br>
+			<button onclick="location.href='/productdetails?id=@p.Id'" class="btn btn-primary m-3">More details</button>
+			<a asp-page="cart" asp-page-handler="buynow" asp-route-id="@p.Id" class="btn btn-primary m-3">Buy Now</a>
+		</div>
+	}
+</div>

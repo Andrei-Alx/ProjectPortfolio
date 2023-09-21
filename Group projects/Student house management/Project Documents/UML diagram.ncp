@@ -1,0 +1,540 @@
+<Project>
+  <Name>UML diagram</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.ClassDiagram" assembly="NClass.DiagramEditor, Version=2.8.0.2, Culture=neutral, PublicKeyToken=null">
+    <Name>Untitled</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>User</Name>
+        <Access>Public</Access>
+        <Location left="101" top="627" />
+        <Size width="245" height="182" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string username</Member>
+        <Member type="Field">string password</Member>
+        <Member type="Constructor">public User(string username, string password)</Member>
+        <Member type="Property">public string Username { get; set; }</Member>
+        <Member type="Property">public string Password { get; set; }</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Admin</Name>
+        <Access>Public</Access>
+        <Location left="666" top="262" />
+        <Size width="245" height="272" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string username</Member>
+        <Member type="Field">string password</Member>
+        <Member type="Constructor">public Admin(string username, string password)</Member>
+        <Member type="Property">public string Username { get; set; }</Member>
+        <Member type="Property">public string Password { get; set; }</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>UserManager</Name>
+        <Access>Public</Access>
+        <Location left="101" top="236" />
+        <Size width="325" height="298" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public List users</Member>
+        <Member type="Field">public List admins</Member>
+        <Member type="Method">public void addUser()</Member>
+        <Member type="Method">public void removeUser()</Member>
+        <Member type="Method">public void modifyUser()</Member>
+        <Member type="Method">public bool checkUser(string username, string password)</Member>
+        <Member type="Method">public void checkUserAdmin(string username, string password)</Member>
+        <Member type="Method">public User GetUser(string username, string password)</Member>
+        <Member type="Method">public User GetUser(string username)</Member>
+        <Member type="Method">public User GetUserByIndex(int index)</Member>
+        <Member type="Method">public User[] GetUsers()</Member>
+        <Member type="Method">public Admin GetAdmin(string username, string password)</Member>
+        <Member type="Method">public string GetUserInfo(User user)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>NormalExpenses</Name>
+        <Access>Public</Access>
+        <Location left="385" top="1491" />
+        <Size width="513" height="636" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">UserManagaer userManager</Member>
+        <Member type="Field">int soapIndex = 0</Member>
+        <Member type="Field">int paperIndex = 0</Member>
+        <Member type="Field">int bathIndex = 0</Member>
+        <Member type="Field">int kitchenIndex = 0</Member>
+        <Member type="Field">int expenseID</Member>
+        <Member type="Field">double total</Member>
+        <Member type="Field">User payee</Member>
+        <Member type="Field">string title</Member>
+        <Member type="Field">List&lt;User&gt; members</Member>
+        <Member type="Field">double amountToBePaidPerMember</Member>
+        <Member type="Field">double amountLeftToBePaid</Member>
+        <Member type="Field">List&lt;User&gt; membersWhoPaid</Member>
+        <Member type="Field">DateTime created_at</Member>
+        <Member type="Constructor">public NormalExpenses(UserManager userManager)</Member>
+        <Member type="Constructor">public NormalExpenses(int expenseID, double total, User payee, string title, List&lt;User&gt; members)</Member>
+        <Member type="Property">public double Total { get; set; }</Member>
+        <Member type="Property">public User Payee { get; set; }</Member>
+        <Member type="Property">public string Title { get; set; }</Member>
+        <Member type="Property">public List&lt;User&gt; Members { get; set; }</Member>
+        <Member type="Property">public double AmountToBePaidPerMember { get; set; }</Member>
+        <Member type="Property">public double AmountLeftToBePaid { get; set; }</Member>
+        <Member type="Property">public List&lt;User&gt; MembersWhoPaid { get; set; }</Member>
+        <Member type="Property">public DateTime CreatedAt { get; set; }</Member>
+        <Member type="Property">public int SoapIndex { get; set; }</Member>
+        <Member type="Property">public int PaperIndex { get; set; }</Member>
+        <Member type="Property">public int KitchenIndex { get; set; }</Member>
+        <Member type="Property">public int BathIndex { get; set; }</Member>
+        <Member type="Method">public string addTenant(int index)</Member>
+        <Member type="Method">public double ComputeAmountToBePaidPerMember()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Cleaning</Name>
+        <Access>Public</Access>
+        <Location left="1019" top="1030" />
+        <Size width="227" height="269" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">UserManager userManager</Member>
+        <Member type="Field">int bathIndex = 0</Member>
+        <Member type="Field">int kitchenIndex = 0</Member>
+        <Member type="Field">int sharedIndex = 0</Member>
+        <Member type="Field">int toiletIndex = 0</Member>
+        <Member type="Constructor">public Cleaning(UserManager userManager)</Member>
+        <Member type="Property">public int BathIndex { get; set; }</Member>
+        <Member type="Property">public int KitchenIndex { get; set; }</Member>
+        <Member type="Property">public int SharedIndex { get; set; }</Member>
+        <Member type="Property">public int ToiletIndex { get; set; }</Member>
+        <Member type="Method">public string AddUsers(int index)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Trash</Name>
+        <Access>Public</Access>
+        <Location left="1424" top="1398" />
+        <Size width="220" height="186" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int index = 0</Member>
+        <Member type="Field">UserManager userManager</Member>
+        <Member type="Constructor">public Trash(UserManager userManager)</Member>
+        <Member type="Method">public string nextUser()</Member>
+        <Member type="Method">public void GetUser()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Agreements</Name>
+        <Access>Public</Access>
+        <Location left="3066" top="1732" />
+        <Size width="717" height="409" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">static int autoIncId = 1</Member>
+        <Member type="Field">int votes = 0</Member>
+        <Member type="Field">int voters = 0</Member>
+        <Member type="Constructor">public Agreements(DateTime dateCreated, string studentsInvolved, string agreement)</Member>
+        <Member type="Constructor">public Agreements(DateTime dateCreated, string studentsInvolved, string agreement, string status)</Member>
+        <Member type="Constructor">public Agreements(DateTime dateCreated, string studentsInvolved, string agreement, string status, int votes, int voters, string voterNames)</Member>
+        <Member type="Property">public int id { get; private set; }</Member>
+        <Member type="Property">public DateTime DateCreated { get; set; }</Member>
+        <Member type="Property">public int StudentsInvolved { get; set; }</Member>
+        <Member type="Property">public int AgreementDescription { get; set; }</Member>
+        <Member type="Property">public int VoterList { get; set; }</Member>
+        <Member type="Property">public int Status { get; set; }</Member>
+        <Member type="Method">public int GetVoters()</Member>
+        <Member type="Method">public void UpdateStatus()</Member>
+        <Member type="Method">public void UpdateStatusVotes()</Member>
+        <Member type="Method">public int CalculatePercentageVotes()</Member>
+        <Member type="Method">public void UpdateDescription()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Complaint</Name>
+        <Access>Public</Access>
+        <Location left="3664" top="186" />
+        <Size width="448" height="230" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string complaintText</Member>
+        <Member type="Field">UserManager usermanager</Member>
+        <Member type="Field">User complaintUser</Member>
+        <Member type="Field">User whosentUser</Member>
+        <Member type="Constructor">public Complaint(string complaintText, User suggestedUser, UserManager userManager)</Member>
+        <Member type="Constructor">public Complaint(string complaintText, User whosentUser, UserManager userManager)</Member>
+        <Member type="Property">publicUsr ComplaintUser { get; set; }</Member>
+        <Member type="Method">public string getComplaintInfo()</Member>
+        <Member type="Method">public string getRevisedInfo()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ComplaintManager</Name>
+        <Access>Public</Access>
+        <Location left="3163" top="203" />
+        <Size width="288" height="213" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">List&lt;Complaint&gt; complaints</Member>
+        <Member type="Field">List&lt;Complaint&gt; revisedComplaints</Member>
+        <Member type="Constructor">public ComplaintManager()</Member>
+        <Member type="Property">public List&lt;Complaint&gt; Complaints { get; set; }</Member>
+        <Member type="Property">public List&lt;Complaint&gt; RevisedComplaints { get; set; }</Member>
+        <Member type="Method">public void addNewComplaint(Complaint complaint)</Member>
+        <Member type="Method">public void removeComplaint()</Member>
+        <Member type="Method">public void addRevisedComplaint(Complaint complaint)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Technical</Name>
+        <Access>Public</Access>
+        <Location left="3632" top="522" />
+        <Size width="245" height="209" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string technicalsText</Member>
+        <Member type="Field">User user</Member>
+        <Member type="Field">datetime&lt;nullable&gt; date</Member>
+        <Member type="Constructor">public Technical(string technicalText, User user)</Member>
+        <Member type="Constructor">public Technical(DateTime dater)</Member>
+        <Member type="Method">public string getTechniacalInfo()</Member>
+        <Member type="Method">public string getReturningTechniacalInfo()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>TechnicalsManager</Name>
+        <Access>Public</Access>
+        <Location left="3184" top="490" />
+        <Size width="267" height="241" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">List&lt;Technical&gt; technicalIssues</Member>
+        <Member type="Field">List&lt;Technical&gt; technicalVisits</Member>
+        <Member type="Method">public Technical[] getTechnical()</Member>
+        <Member type="Method">public void addTechnical(Technical technical)</Member>
+        <Member type="Method">public void removeTechnical()</Member>
+        <Member type="Method">public void addTechnicalVisit(Technical technical)</Member>
+        <Member type="Method">public void removeTechnicalVisit()</Member>
+        <Member type="Method">public Technical[] getTechnicalVisits()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Event</Name>
+        <Access>Public</Access>
+        <Location left="2201" top="1563" />
+        <Size width="306" height="237" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">DateTime date</Member>
+        <Member type="Field">User user</Member>
+        <Member type="Field">string description</Member>
+        <Member type="Constructor">public Event(string DateTime, User user, string description)</Member>
+        <Member type="Constructor">public Event(string DateTime, User user)</Member>
+        <Member type="Constructor">public Event(string description)</Member>
+        <Member type="Method">public string getEventInfo()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>EventManager</Name>
+        <Access>Public</Access>
+        <Location left="2213" top="1191" />
+        <Size width="245" height="182" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">List&lt;Events&gt; events</Member>
+        <Member type="Method">public void addEvent(Events events)</Member>
+        <Member type="Method">public void removeEvent(int index)</Member>
+        <Member type="Method">public Event[] getEvents()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AgreementsManager</Name>
+        <Access>Public</Access>
+        <Location left="3048" top="1077" />
+        <Size width="717" height="409" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">List&lt;User&gt; users</Member>
+        <Member type="Field">List&lt;Agreements&gt; agreements</Member>
+        <Member type="Field">static AgreementsManager instance = null</Member>
+        <Member type="Property">public static AgreementsManager Instance { get; set; }</Member>
+        <Member type="Method">public void CreateAgreement(DateTime currentDate, string involvedStudents, string agreementDesc)</Member>
+        <Member type="Method">private void AddAgreementToList(Agreements agreement)</Member>
+        <Member type="Method">public List&lt;Agreements&gt; GetAgreementsList()</Member>
+        <Member type="Method">public Use[] GetUserList()</Member>
+        <Member type="Method">public void RemoveAgreementById(int id)</Member>
+        <Member type="Method">public void SendAcceptToPrivateAgreement(int id)</Member>
+        <Member type="Method">public void SendRejectToPrivateAgreement(int id)</Member>
+        <Member type="Method">public void SendAcceptToPublicAgreement(int id, string studentWhoVoted)</Member>
+        <Member type="Method">public void SendRejectToPublicAgreement(int id, string studentWhoVoted)</Member>
+        <Member type="Method">public int GetAgreementVoters(int id)</Member>
+        <Member type="Method">public int GetAgreementVotesPercentage(int id)</Member>
+        <Member type="Method">public void EditAgreementDescription(int id, string newDescription)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>NotificationManager</Name>
+        <Access>Public</Access>
+        <Location left="1760" top="1368" />
+        <Size width="232" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">List&lt;string&gt; notifications</Member>
+        <Member type="Method">public string[] GetNotificationList()</Member>
+        <Member type="Method">public void AddNotification(string notification)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ExpenseManager</Name>
+        <Access>Public</Access>
+        <Location left="532" top="997" />
+        <Size width="218" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">List&lt;NormalExpense&gt; expenses</Member>
+        <Member type="Constructor">public ExpenseManager()</Member>
+        <Member type="Method">public void AddExpense(NormalExpense normalExpense)</Member>
+        <Member type="Method">public List&lt;NormalExpense&gt; GetExpenses()</Member>
+        <Member type="Method">public void SetExpenses(List&lt;NormalExpenses&gt; expenses)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ClassesManager</Name>
+        <Access>Public</Access>
+        <Location left="1982" top="300" />
+        <Size width="514" height="494" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">Cleaning cleaning</Member>
+        <Member type="Field">ComplaintManager complaintManager</Member>
+        <Member type="Field">EventManager eventManager</Member>
+        <Member type="Field">Trash trash</Member>
+        <Member type="Field">ExpenseManager expenseManager</Member>
+        <Member type="Field">NormalExpense normalExpense</Member>
+        <Member type="Field">UserManager userManager</Member>
+        <Member type="Field">TechnicalManager technicalManager</Member>
+        <Member type="Field">NotificationManager notificationManager</Member>
+        <Member type="Field">AgreementsManager agreementsManager</Member>
+        <Member type="Constructor">public ClassesManager()</Member>
+        <Member type="Method">public void SerializeObject()</Member>
+        <Member type="Method">public void DeserializeObject()</Member>
+        <Member type="Property">public Cleaning Cleaning { get; set; }</Member>
+        <Member type="Property">public ComplaintManager ComplaintManager { get; set; }</Member>
+        <Member type="Property">public EventManager EventManager { get; set; }</Member>
+        <Member type="Property">public Trash Trash { get; set; }</Member>
+        <Member type="Property">public ExpenseManager ExpenseManager { get; set; }</Member>
+        <Member type="Property">public NormalExpense NormalExpense { get; set; }</Member>
+        <Member type="Property">public UserManager UserManager { get; set; }</Member>
+        <Member type="Property">public TechnicalManager TechnicalManager { get; set; }</Member>
+        <Member type="Property">public NotificationManager NotificationManager { get; set; }</Member>
+        <Member type="Property">public AgreementsManager AgreementsManager { get; set; }</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Containers />
+    <Relationships>
+      <Relationship type="Association" first="2" second="0">
+        <Label>can have</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <EndMultiplicity>0..*</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="2" second="1">
+        <Label>can have</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <EndMultiplicity>1..*</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="8" second="7">
+        <Label>can have</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>3476</X>
+          <Y>306</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>3639</X>
+          <Y>306</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <EndMultiplicity>0..*</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="10" second="9">
+        <Label>can have</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>3476</X>
+          <Y>601</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>3607</X>
+          <Y>601</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <EndMultiplicity>0..*</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="12" second="11">
+        <Label>can have</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>2335</X>
+          <Y>1399</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>2335</X>
+          <Y>1537</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <EndMultiplicity>0..*</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="13" second="6">
+        <Label>can have</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>3416</X>
+          <Y>1518</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>3416</X>
+          <Y>1707</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <EndMultiplicity>0..*</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="15" second="3">
+        <Label>can have</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <EndMultiplicity>0..*</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="16" second="8">
+        <Label>has</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>2398</X>
+          <Y>270</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>3264</X>
+          <Y>106</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="16" second="10">
+        <Label>has</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>2592</X>
+          <Y>475</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>3117</X>
+          <Y>596</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="16" second="13">
+        <Label>has</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>2467</X>
+          <Y>827</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="16" second="12">
+        <Label>has</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>2330</X>
+          <Y>915</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="16" second="14">
+        <Label>has</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>2163</X>
+          <Y>866</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="16" second="5">
+        <Label>has</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>2060</X>
+          <Y>819</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1535</X>
+          <Y>1178</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="16" second="4">
+        <Label>has</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1957</X>
+          <Y>781</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1173</X>
+          <Y>858</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="16" second="15">
+        <Label>has</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1790</X>
+          <Y>667</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="16" second="2">
+        <Label>has</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1929</X>
+          <Y>503</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>271</X>
+          <Y>201</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>

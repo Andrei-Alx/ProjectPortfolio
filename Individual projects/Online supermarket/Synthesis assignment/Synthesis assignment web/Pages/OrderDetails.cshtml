@@ -1,0 +1,13 @@
+﻿@page
+@using Logic;
+@model Synthesis_assignment_web.Pages.OrderDetailsModel
+@{
+}
+<div class="productcard">
+	@foreach (OrderProduct orderProduct in Model.Order.Products)
+	{
+		<p>Name: @orderProduct.Product.Name</p>
+		<p>Price: @orderProduct.Product.Price</p>
+		<p>Total price: @orderProduct.Price</p>
+	}
+</div>

@@ -1,0 +1,33 @@
+    .slick-slider {
+        position: relative;
+        display: block;
+        box-sizing: border-box;
+        -webkit-touch-callout: none;
+        touch-action: pan-y;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+        border: 10px solid #1B3B6F;
+        margin-top: 20px;
+    }
+    
+    .slick-list {
+        position: relative;
+        display: block;
+        overflow: hidden;
+    }
+    
+    .slick-slide {
+        float: left;
+        min-height: 1px;
+        display: none;
+        width: 500px;
+        height: 500px;
+    }
+    
+    .slick-slide img {
+        display: block;
+        width: 500px;
+        height: 500px;
+        object-fit: cover;
+        border: 5px solid #ffffff;
+    }

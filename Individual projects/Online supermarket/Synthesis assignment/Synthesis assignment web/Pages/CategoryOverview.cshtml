@@ -1,0 +1,15 @@
+﻿@page
+@using Logic
+@model Synthesis_assignment_web.Pages.CategoryOverviewModel
+@{
+}
+<div class="categoryParent">
+	@foreach (Category c in Model.Categories)
+	{
+		<div class="productcard">
+			<span class="h4">@c.Name</span>
+			<br>
+			<button onclick="location.href='/SubcategoryOverview?id=@c.Id'" class="btn btn-primary m-3">See sub categories</button>
+		</div>
+	}
+</div>

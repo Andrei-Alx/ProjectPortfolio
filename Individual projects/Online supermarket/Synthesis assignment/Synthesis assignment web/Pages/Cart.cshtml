@@ -1,0 +1,39 @@
+﻿@page
+@using Logic;
+@model Synthesis_assignment_web.Pages.CartModel
+@{
+}
+<h1>Your cart</h1>
+@if (Model.cart is null || Model.cart.Count == 0)
+{
+	<p>You don't have any products in the cart.</p><a asp-page="ProductOverview" class="btn btn-primary m-1">See all products</a>
+}
+<form method="get" asp-page="cart">
+	<table border="1">
+		<tr>
+			<th>Delete</th>
+			<th>Id</th>
+			<th>Name</th>
+			<th>Image</th>
+			<th>Quantity</th>
+			<th>Price</th>
+		</tr>
+		@foreach (OrderProduct item in Model.cart)
+		{
+			<tr align="center">
+				<td align="center">
+					<a class="btn-primary btn" asp-page="cart" asp-page-handler="delete" asp-route-id="@item.Product.Id">X</a>
+				</td>
+				<td>@item.Product.Id</td>
+				<td>@item.Product.Name</td>
+				<td><img src="@item.Product.Image" width="100" height="100" /></td>
+				<td><input type="number" asp-for="OrderProduct.Quantity" value="@item.Quantity" readonly="readonly" min="1" max="10" /></td>
+				<td>@item.Price€</td>
+			</tr>
+		}
+		<tr>
+			<td colspan="5" align="left">Total @Model.Total€ 
+			<a class="btn-primary btn d-flex end-0" asp-page="CheckOut" asp-page-handler="order" asp-route-total="@Model.Total">Checkout</a></td>
+		</tr>
+	</table>
+</form>

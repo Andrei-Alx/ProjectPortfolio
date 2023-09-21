@@ -1,0 +1,94 @@
+plugins {
+    id 'org.springframework.boot' version '2.7.3'
+    id 'io.spring.dependency-management' version '1.0.13.RELEASE'
+    id 'java'
+    id "org.sonarqube" version "3.5.0.2730"
+    id 'jacoco'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+sourceCompatibility = '17'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'ch.qos.logback:logback-classic:1.2.11'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'org.springframework.boot:spring-boot-starter-websocket'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'org.flywaydb:flyway-core:9.1.6'
+    implementation 'org.flywaydb:flyway-mysql:9.1.6'
+    implementation 'mysql:mysql-connector-java:8.0.30'
+    implementation 'ch.qos.logback:logback-classic:1.2.11'
+    implementation 'org.springdoc:springdoc-openapi-ui:1.6.10'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    //testImplementation 'org.springframework.cloud:spring-cloud-starter-bootstrap:3.1.3'
+    testImplementation 'com.playtika.testcontainers:embedded-mysql:2.2.5'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'io.jsonwebtoken:jjwt-api:0.11.2'
+    runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.2'
+    runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.11.2'
+    implementation 'org.springframework.boot:spring-boot-starter-aop'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.security:spring-security-test'
+}
+
+test {
+    useJUnitPlatform()
+    finalizedBy jacocoTestReport
+}
+
+jacocoTestReport {
+    dependsOn test
+    reports {
+        xml.enabled true
+    }
+    afterEvaluate {
+        classDirectories.setFrom(files(classDirectories.files.collect {
+            fileTree(dir: it, exclude: [
+                    "**/configuration/*"
+            ])
+        }))
+    }
+}
+
+sonar {
+    properties {
+        property "sonar.projectKey", "TenisTitansBackend"
+        property "sonar.java.coveragePlugin", "jacoco"
+//        property "sonar.jacoco.ReportPaths", "build/reports/jacoco/jacocoTestReport.xml"
+//        property "sonar.junit.reportPaths", "$project.buildDir/test-results/test"
+        property "sonar.sources", "src/main"
+        property "sonar.tests", "src/test"
+        property "sonar.qualitygate.wait", true
+        property "sonar.host.url", "http://localhost:9000"
+        property "sonar.login", "sqp_f4d7225cafd29144cfb1cfefd800ee88445d1bcf"
+        property "sonar.coverage.jacoco.xmlReportPaths", "${rootDir}/build/reports/jacoco/test/jacocoTestReport.xml"
+        property "sonar.projectKey", "TenisTitansBackend"
+        property "sonar.coverage.exclusions",
+                "**/org/example/configuration/**/*," +
+                        "**/org/example/controller/**/*," +
+                        "**/org/example/persistance/**/*," +
+                        "**/org/example/domain/**/*," +
+                        "**/org/example/business/exception/**/*,"
+    }
+}

@@ -1,0 +1,146 @@
+﻿@page
+@using Logic
+@model Synthesis_assignment_web.Pages.CheckOutModel
+@{
+}
+<head>
+	<link href="~/css/checkout.css" rel="stylesheet" />
+</head>
+<h1>Welcome to the checkout form! Please complete your order's details!</h1>
+<h2>@Model.ViewData["Error"]</h2>
+
+<body>
+	<form method="post">
+		<div class="row">
+			<div class="col-75">
+				<div class="container">
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" asp-for="CBHomeDelivery" />
+						<label class="form-check-label" asp-for="CBHomeDelivery">Home delivery</label>
+						<span asp-validation-for="CBHomeDelivery" class="text-danger"></span>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" asp-for="CBPickupDelivery" />
+						<label class="form-check-label" asp-for="CBPickupDelivery">Pickup</label>
+						<span asp-validation-for="CBPickupDelivery" class="text-danger"></span>
+					</div>
+					<button type="submit" asp-page-handler="ChooseDelivery" class="btn">Choose delivery method</button>
+					<div class="row">
+						<div class="col-50">
+							<div class="row">
+								<h3>Shipping information</h3>
+								@if (Model.CBHomeDelivery == true)
+								{
+									<label asp-for="HomeDelivery.Fullname"><i class="fa fa-user"></i> Full Name</label>
+									<input asp-for="HomeDelivery.Fullname" id="fname" name="fullname" placeholder="John M. Doe" value="" />
+									<span asp-validation-for="HomeDelivery.Fullname" class="text-danger"></span>
+
+									<label asp-for="HomeDelivery.Email"><i class="fa fa-envelope"></i> Email</label>
+									<input asp-for="HomeDelivery.Email" id="email" name="email" placeholder="john@example.com" value="" />
+									<span asp-validation-for="HomeDelivery.Email" class="text-danger"></span>
+
+									<label asp-for="HomeDelivery.Adress" class="fa fa-address-card-o">Adress</label>
+									<input type="text" asp-for="HomeDelivery.Adress" name="adress" placeholder="Street name and house number" />
+									<span asp-validation-for="HomeDelivery.Adress" class="text-danger"></span>
+
+									@*<label asp-for="ShippingInformation.City" class="fa fa-institution">City</label>
+								<input type="text" asp-for="ShippingInformation.City" placeholder="Eindhoven" />
+								<span asp-validation-for="ShippingInformation.City" class="text-danger"></span>
+
+								<div class="col-50">
+								<label asp-for="ShippingInformation.Region">Region</label>
+								<input type="text" asp-for="ShippingInformation.Region" placeholder="Noord Brabant" />
+								<span asp-validation-for="ShippingInformation.Region" class="text-danger"></span>
+								</div>
+
+								<div class="col-50">
+								<label asp-for="ShippingInformation.PostalCode">Postal Code</label>
+								<input type="text" asp-for="ShippingInformation.PostalCode" placeholder="1234AB" />
+								<span asp-validation-for="ShippingInformation.PostalCode" class="text-danger"></span>
+								</div>*@
+									<select class="form-select" asp-for="DeliveryHour">
+										<option value="">Select an hour</option>
+										<option value="9">9</option>
+										<option value="10">10</option>
+										<option value="11">11</option>
+										<option value="12">12</option>
+										<option value="13">13</option>
+										<option value="14">14</option>
+										<option value="15">15</option>
+										<option value="16">16</option>
+										<option value="17">17</option>
+										<option value="18">18</option>
+										<option value="19">19</option>
+										<option value="20">20</option>
+										<option value="21">21</option>
+									</select>
+									<select class="form-select" asp-for="DeliveryMinutes">
+										<option value="">Select a timeslot</option>
+										<option value="00">00</option>
+										<option value="15">15</option>
+										<option value="30">30</option>
+										<option value="45">45</option>
+									</select>
+								}
+								else if (Model.CBPickupDelivery == true)
+								{
+									<label asp-for="PickupDelivery.Fullname"><i class="fa fa-user"></i> Full Name</label>
+									<input asp-for="PickupDelivery.Fullname" id="fname" name="fullname" placeholder="John M. Doe" value="" />
+
+									<label asp-for="PickupDelivery.Email"><i class="fa fa-envelope"></i> Email</label>
+									<input asp-for="PickupDelivery.Email" id="email" name="email" placeholder="john@example.com" value="" />
+
+									<label asp-for="PickupDelivery.Store"><i class="fa fa-address-card-o"></i> Store adress</label>
+									<input asp-for="PickupDelivery.Store" id="adr" name="store" placeholder="RobertHeijn, 542 W. 15th Street" value="" />
+
+									<select class="form-select" asp-for="PickUpHour">
+										<option value="">Select an hour</option>
+										<option value="8">8</option>
+										<option value="9">9</option>
+										<option value="10">10</option>
+										<option value="11">11</option>
+										<option value="12">12</option>
+										<option value="13">13</option>
+										<option value="14">14</option>
+										<option value="15">15</option>
+										<option value="16">16</option>
+										<option value="17">17</option>
+										<option value="18">18</option>
+										<option value="19">19</option>
+										<option value="20">20</option>
+										<option value="21">21</option>
+										<option value="22">22</option>
+									</select>
+									<select class="form-select" asp-for="PickUpMinutes">
+										<option value="">Select a timeslot</option>
+										<option value="00">00</option>
+										<option value="30">30</option>
+									</select>
+								}
+							</div>
+						</div>
+					</div>
+					<input type="submit" asp-page-handler="Checkout" value="Continue to checkout" class="btn">
+				</div>
+			</div>
+
+			<div class="col-25">
+				<div class="container">
+					<h4>
+						Cart
+						<span class="price" style="color:black">
+							<i class="fa fa-shopping-cart"></i>
+							<b>@Model.Cart.Count</b>
+						</span>
+					</h4>
+					@foreach (OrderProduct orderProduct in Model.Cart)
+					{
+						<p>@orderProduct.Product.Name <span class="price">@orderProduct.Price€</span></p>
+					}
+					<hr>
+					<p>Total <span class="price"><b>@Model.Total€</b></span></p>
+				</div>
+			</div>
+		</div>
+	</form>
+</body>

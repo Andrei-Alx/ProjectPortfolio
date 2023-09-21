@@ -1,0 +1,10 @@
+﻿@page
+@model Synthesis_assignment_web.Pages.ProfileModel
+@{
+}
+<header class="content_header">
+	<h1>Welcome to your Profile, @User.Identity.Name</h1>
+</header>
+<form method="post" asp-page-handler="Logout">
+	<button type="submit" class="button"><span>Logout</span></button>
+</form>

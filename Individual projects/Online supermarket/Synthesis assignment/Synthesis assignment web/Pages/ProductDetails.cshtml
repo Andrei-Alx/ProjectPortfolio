@@ -1,0 +1,15 @@
+﻿@page
+@model Synthesis_assignment_web.Pages.ProductDetailsModel
+@{
+}
+<body>
+	<div class="productcard">
+		<img src="@Model.Product.Image" />
+		<span class="name">@Model.Product.Name</span>
+		<span class="price">@Model.Product.Price</span>
+		<span class="category">@Model.Product.Category.Name</span>
+		<span class="brand">@Model.Product.SubCategory.Name</span>
+		<span class="brand">@Model.Product.Unit</span>
+		<span class="brand">@Model.Product.ProductStatus</span>
+	</div>
+</body>

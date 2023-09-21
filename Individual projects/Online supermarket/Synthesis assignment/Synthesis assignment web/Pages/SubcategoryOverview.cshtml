@@ -1,0 +1,15 @@
+﻿@page
+@using Logic;
+@model Synthesis_assignment_web.Pages.SubcategoryOverviewModel
+@{
+}
+<body>
+	@foreach (Category c in Model.SubCategories)
+	{
+		<div class="productcard">
+			<span class="h4">@c.Name</span>
+			<br>
+			<a asp-page="SubcategoryProducts" asp-route-name="@c.Name" class="btn btn-primary m-3">See products</a>
+		</div>
+	}
+</body>

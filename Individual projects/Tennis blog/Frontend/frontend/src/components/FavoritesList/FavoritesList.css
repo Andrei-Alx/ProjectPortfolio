@@ -1,0 +1,26 @@
+.grid--large-screenfav {
+    display: grid;
+    grid-template-columns: repeat(2, 0.5fr);
+    grid-template-rows: repeat(2, 0.5fr);
+    align-items: stretch;
+}
+
+.grid--small-screenfav {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    align-items: stretch;
+}
+
+.postCardfav {
+    grid-template-columns: max-content max-content;
+    grid-template-rows: auto;
+    padding: 1px;
+    margin: 0;
+    border: ridge;
+}
+
+.postCardfav * {
+    padding: 1px;
+    margin: 0;
+}

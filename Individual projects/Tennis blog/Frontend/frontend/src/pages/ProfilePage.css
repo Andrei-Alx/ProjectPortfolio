@@ -1,0 +1,15 @@
+.profile-page-container {
+    display: flex;
+}
+
+.add-post-form-container {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.favorites-list-container {
+    flex: 1;
+    padding-top: 30px;
+    overflow-y: scroll;
+    height:700px;
+}

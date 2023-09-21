@@ -1,0 +1,19 @@
+﻿@page
+@using Logic;
+@model Synthesis_assignment_web.Pages.MyOrdersModel
+@{
+}
+<h1>My orders</h1>
+<div class="parent">
+	@foreach (Order o in Model.Orders)
+	{
+		<div class="productcard">
+			<span class="Id">@o.Id</span>
+			<span class="OrderDate">@o.Time</span>
+			<span class="OrderStatus">@o.OrderStatus</span>
+			<br>
+			<a asp-page="OrderDetails" asp-page-handler="details" asp-route-id="@o.Id" class="btn btn-primary m-3">See recipt</a>
+		</div>
+	}
+</div>
+@*<button onclick="location.href='/productdetails?id=@o.Id'" class="btn btn-primary m-3">See recipt</button>*@

@@ -1,0 +1,37 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<body>
+    <h1 class="app-title">Quickly go to...</h1>
+    <div class="homeCardsParent">
+
+        <div class="card">
+            <img class="img" src="~/resources/categories.jpg" width="425" height="300">
+            <div class="cardcontainer">
+                <h4><b>All categories</b></h4>
+                <p>Everything you might want to find!</p>
+            </div>
+            <button onclick="location.href='/CategoryOverview'" class="btn btn-primary">Go now</button>
+        </div>
+
+        <div class="card">
+            <img src="~/resources/bioProducts.jpg" width="425" height="300">
+            <div class="cardcontainer">
+                <h4><b> Products</b></h4>
+                <p>Freshly gathered everyday</p>
+            </div>
+            <a asp-page="ProductOverview" asp-page-handler="Filter" asp-route-subCategory="Bio" class="btn btn-primary m-3">GO NOW</a>
+        </div>
+
+        <div class="card">
+            <img src="/resources/user.png" width="425" height="300">
+            <div class="cardcontainer">
+                <h4><b>My profile</b></h4>
+                <p>Check your profile</p>
+            </div>
+            <button onclick="location.href='/Profile'" class="btn btn-primary">Go now</button>
+        </div>
+    </div>
+</body>
