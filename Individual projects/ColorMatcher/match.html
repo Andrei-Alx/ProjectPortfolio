@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>ColorMatcher</title>
+    <meta name="author" content="Andrei Alexandru" />
+    <meta name="description" content="An app that will help you match with other people based on your color" />
+    <meta name="keywords" content="pwa,colors,colorMatching,fontys,smart mobile" />
+    <link rel="stylesheet" href="./css/match.css" type="text/css" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+</head>
+
+<body>
+    <div>
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="match.html">Take Photo</a>
+        </div>
+
+        <h2 id="dominantColorDisplay">Predominant color is </h2>
+        <h2 id="savedColorDisplay">Saved color is </h2>
+
+        <div class="container">
+            <video id="video" autoplay></video>
+            <canvas id="canvas"></canvas>
+            <button id="capture">Take Photo</button>
+        </div>
+    </div>
+
+    <script>
+        function hexToRgb(hex) {
+            var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+            return result ? {
+                r: parseInt(result[1], 16),
+                g: parseInt(result[2], 16),
+                b: parseInt(result[3], 16)
+            } : null;
+        }
+
+        var video = document.getElementById('video');
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+
+        navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } })
+            .then(function(stream) {
+                video.srcObject = stream;
+                video.play();
+            });
+
+        document.getElementById('capture').addEventListener('click', function() {
+            ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+            
+            var imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+            var data = imageData.data;
+            var colorCounts = {};
+
+            for (var i = 0; i < data.length; i += 4) {
+                var red = data[i];
+                var green = data[i + 1];
+                var blue = data[i + 2];
+
+                var color = red << 16 | green << 8 | blue;
+                colorCounts[color] = (colorCounts[color] || 0) + 1;
+            }
+
+            var dominantColor = null;
+            var maxCount = 0;
+            for (var color in colorCounts) {
+                if (colorCounts[color] > maxCount) {
+                    maxCount = colorCounts[color];
+                    dominantColor = color;
+                }
+            }
+
+            var blue = dominantColor & 255;
+            var green = dominantColor >> 8 & 255;
+            var red = dominantColor >> 16 & 255;
+
+            var savedColor = localStorage.getItem("savedColor");
+            let savedColorRGB = hexToRgb(savedColor);
+
+            if (savedColorRGB) {
+                const avgRGB = (red + green + blue)/3
+                const avgPicRGB = (savedColorRGB.r + savedColorRGB.g + savedColorRGB.b)/3
+                if (avgRGB === avgPicRGB) {
+                    alert("The predominant color matches the saved color!");
+                    let audio = new Audio('./check.mp3');
+                    audio.play();
+                }
+                else{
+                    alert("Colors don't match!")
+                    let audio = new Audio('./rejected.mp3');
+                    audio.play();
+                }
+            }
+        });
+    </script>
+</body>
+</html>

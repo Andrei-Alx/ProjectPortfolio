@@ -1,0 +1,32 @@
+{
+    "theme_color": "#ffb703",
+    "background_color": "#023047",
+    "display": "standalone",
+    "scope": ".",
+    "start_url": "./",
+    "name": "Color Matcher",
+    "short_name": "ColrMatch",
+    "description": "An app that will help you match with other people based on your color",
+    "icons": [
+        {
+            "src": "icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icon-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

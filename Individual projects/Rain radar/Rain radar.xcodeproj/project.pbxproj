@@ -1,0 +1,735 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5A1FE58F2AF101A100B0342D /* SearchCrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1FE58E2AF101A100B0342D /* SearchCrop.swift */; };
+		5A1FE5912AF1024D00B0342D /* Crop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1FE5902AF1024D00B0342D /* Crop.swift */; };
+		5A3296142AEC43B3004E5336 /* Rain_radarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3296132AEC43B3004E5336 /* Rain_radarApp.swift */; };
+		5A3296162AEC43B3004E5336 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3296152AEC43B3004E5336 /* ContentView.swift */; };
+		5A3296182AEC43B5004E5336 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A3296172AEC43B5004E5336 /* Assets.xcassets */; };
+		5A32961B2AEC43B5004E5336 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A32961A2AEC43B5004E5336 /* Preview Assets.xcassets */; };
+		5A3296252AEC43B6004E5336 /* Rain_radarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3296242AEC43B6004E5336 /* Rain_radarTests.swift */; };
+		5A32962F2AEC43B6004E5336 /* Rain_radarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A32962E2AEC43B6004E5336 /* Rain_radarUITests.swift */; };
+		5A3296312AEC43B6004E5336 /* Rain_radarUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3296302AEC43B6004E5336 /* Rain_radarUITestsLaunchTests.swift */; };
+		5A32963E2AEC4579004E5336 /* WeatherCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A32963D2AEC4579004E5336 /* WeatherCard.swift */; };
+		5A3296412AEC5D0B004E5336 /* WeatherOverviewSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3296402AEC5D0B004E5336 /* WeatherOverviewSegment.swift */; };
+		5A3296432AEC73B3004E5336 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3296422AEC73B3004E5336 /* Header.swift */; };
+		5A8306FF2AF02E350085DF37 /* PlantAdvice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8306FE2AF02E350085DF37 /* PlantAdvice.swift */; };
+		5A9B155B2AEEB61000561C35 /* SunRiseSunSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9B155A2AEEB61000561C35 /* SunRiseSunSet.swift */; };
+		5A9B155D2AEEBC7B00561C35 /* DayInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9B155C2AEEBC7B00561C35 /* DayInfo.swift */; };
+		5A9B155F2AEEDF9700561C35 /* HourlyForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9B155E2AEEDF9700561C35 /* HourlyForecast.swift */; };
+		5A9B15652AEF0CAB00561C35 /* LowerHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9B15642AEF0CAB00561C35 /* LowerHeader.swift */; };
+		5AD457A22AFBD7EA00E67415 /* suntimesimple.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AD457A12AFBD7EA00E67415 /* suntimesimple.png */; };
+		5AEA6C852AFA433500E0A753 /* RainPredictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA6C842AFA433500E0A753 /* RainPredictor.swift */; };
+		5AEE39AE2AF2597000982261 /* tomatoes.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AEE39A02AF2596F00982261 /* tomatoes.png */; };
+		5AEE39AF2AF2597000982261 /* onion.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AEE39A12AF2596F00982261 /* onion.png */; };
+		5AEE39B02AF2597000982261 /* eggplants.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AEE39A22AF2596F00982261 /* eggplants.png */; };
+		5AEE39B12AF2597000982261 /* salad.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AEE39A32AF2596F00982261 /* salad.png */; };
+		5AEE39B22AF2597000982261 /* cucumbers.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AEE39A42AF2596F00982261 /* cucumbers.png */; };
+		5AEE39B32AF2597000982261 /* zucchini.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AEE39A52AF2596F00982261 /* zucchini.png */; };
+		5AEE39B42AF2597000982261 /* beetroot.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AEE39A62AF2596F00982261 /* beetroot.png */; };
+		5AEE39B52AF2597000982261 /* potatoes.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AEE39A72AF2596F00982261 /* potatoes.png */; };
+		5AEE39B62AF2597000982261 /* watermelons.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AEE39A82AF2596F00982261 /* watermelons.png */; };
+		5AEE39B72AF2597000982261 /* spinach.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AEE39A92AF2596F00982261 /* spinach.png */; };
+		5AEE39B82AF2597000982261 /* pumpkins.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AEE39AA2AF2597000982261 /* pumpkins.png */; };
+		5AEE39B92AF2597000982261 /* corn.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AEE39AB2AF2597000982261 /* corn.png */; };
+		5AEE39BA2AF2597000982261 /* peppers.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AEE39AC2AF2597000982261 /* peppers.png */; };
+		5AEE39BB2AF2597000982261 /* radishes.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AEE39AD2AF2597000982261 /* radishes.png */; };
+		5AEE39BD2AF25AC900982261 /* carrots.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AEE39BC2AF25AC900982261 /* carrots.png */; };
+		5AEE39BF2AF2682B00982261 /* HumBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEE39BE2AF2682B00982261 /* HumBar.swift */; };
+		5AEE39C12AF26DD700982261 /* TempBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEE39C02AF26DD700982261 /* TempBar.swift */; };
+		5AF8ACCB2AED52EC0080BB18 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF8ACCA2AED52EC0080BB18 /* Weather.swift */; };
+		5AF8ACCD2AED5D740080BB18 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF8ACCC2AED5D740080BB18 /* ModelData.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5A3296212AEC43B6004E5336 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A3296082AEC43B2004E5336 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A32960F2AEC43B3004E5336;
+			remoteInfo = "Rain radar";
+		};
+		5A32962B2AEC43B6004E5336 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A3296082AEC43B2004E5336 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A32960F2AEC43B3004E5336;
+			remoteInfo = "Rain radar";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5A1FE58E2AF101A100B0342D /* SearchCrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCrop.swift; sourceTree = "<group>"; };
+		5A1FE5902AF1024D00B0342D /* Crop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crop.swift; sourceTree = "<group>"; };
+		5A3296102AEC43B3004E5336 /* Rain radar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rain radar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A3296132AEC43B3004E5336 /* Rain_radarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rain_radarApp.swift; sourceTree = "<group>"; };
+		5A3296152AEC43B3004E5336 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5A3296172AEC43B5004E5336 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5A32961A2AEC43B5004E5336 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5A3296202AEC43B6004E5336 /* Rain radarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rain radarTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A3296242AEC43B6004E5336 /* Rain_radarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rain_radarTests.swift; sourceTree = "<group>"; };
+		5A32962A2AEC43B6004E5336 /* Rain radarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rain radarUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A32962E2AEC43B6004E5336 /* Rain_radarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rain_radarUITests.swift; sourceTree = "<group>"; };
+		5A3296302AEC43B6004E5336 /* Rain_radarUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rain_radarUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5A32963D2AEC4579004E5336 /* WeatherCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCard.swift; sourceTree = "<group>"; };
+		5A3296402AEC5D0B004E5336 /* WeatherOverviewSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherOverviewSegment.swift; sourceTree = "<group>"; };
+		5A3296422AEC73B3004E5336 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		5A8306FE2AF02E350085DF37 /* PlantAdvice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantAdvice.swift; sourceTree = "<group>"; };
+		5A9B155A2AEEB61000561C35 /* SunRiseSunSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunRiseSunSet.swift; sourceTree = "<group>"; };
+		5A9B155C2AEEBC7B00561C35 /* DayInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayInfo.swift; sourceTree = "<group>"; };
+		5A9B155E2AEEDF9700561C35 /* HourlyForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyForecast.swift; sourceTree = "<group>"; };
+		5A9B15642AEF0CAB00561C35 /* LowerHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LowerHeader.swift; sourceTree = "<group>"; };
+		5AD457A12AFBD7EA00E67415 /* suntimesimple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = suntimesimple.png; sourceTree = "<group>"; };
+		5AEA6C842AFA433500E0A753 /* RainPredictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainPredictor.swift; sourceTree = "<group>"; };
+		5AEE39A02AF2596F00982261 /* tomatoes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tomatoes.png; sourceTree = "<group>"; };
+		5AEE39A12AF2596F00982261 /* onion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = onion.png; sourceTree = "<group>"; };
+		5AEE39A22AF2596F00982261 /* eggplants.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eggplants.png; sourceTree = "<group>"; };
+		5AEE39A32AF2596F00982261 /* salad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = salad.png; sourceTree = "<group>"; };
+		5AEE39A42AF2596F00982261 /* cucumbers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cucumbers.png; sourceTree = "<group>"; };
+		5AEE39A52AF2596F00982261 /* zucchini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zucchini.png; sourceTree = "<group>"; };
+		5AEE39A62AF2596F00982261 /* beetroot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beetroot.png; sourceTree = "<group>"; };
+		5AEE39A72AF2596F00982261 /* potatoes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = potatoes.png; sourceTree = "<group>"; };
+		5AEE39A82AF2596F00982261 /* watermelons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = watermelons.png; sourceTree = "<group>"; };
+		5AEE39A92AF2596F00982261 /* spinach.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spinach.png; sourceTree = "<group>"; };
+		5AEE39AA2AF2597000982261 /* pumpkins.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pumpkins.png; sourceTree = "<group>"; };
+		5AEE39AB2AF2597000982261 /* corn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = corn.png; sourceTree = "<group>"; };
+		5AEE39AC2AF2597000982261 /* peppers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = peppers.png; sourceTree = "<group>"; };
+		5AEE39AD2AF2597000982261 /* radishes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radishes.png; sourceTree = "<group>"; };
+		5AEE39BC2AF25AC900982261 /* carrots.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carrots.png; sourceTree = "<group>"; };
+		5AEE39BE2AF2682B00982261 /* HumBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumBar.swift; sourceTree = "<group>"; };
+		5AEE39C02AF26DD700982261 /* TempBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempBar.swift; sourceTree = "<group>"; };
+		5AF8ACCA2AED52EC0080BB18 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		5AF8ACCC2AED5D740080BB18 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5A32960D2AEC43B3004E5336 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A32961D2AEC43B6004E5336 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A3296272AEC43B6004E5336 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5A22A7432AF1858E00DD5869 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5AD457A12AFBD7EA00E67415 /* suntimesimple.png */,
+				5AEE39A62AF2596F00982261 /* beetroot.png */,
+				5AEE39AB2AF2597000982261 /* corn.png */,
+				5AEE39BC2AF25AC900982261 /* carrots.png */,
+				5AEE39A42AF2596F00982261 /* cucumbers.png */,
+				5AEE39A22AF2596F00982261 /* eggplants.png */,
+				5AEE39A12AF2596F00982261 /* onion.png */,
+				5AEE39AC2AF2597000982261 /* peppers.png */,
+				5AEE39A72AF2596F00982261 /* potatoes.png */,
+				5AEE39AA2AF2597000982261 /* pumpkins.png */,
+				5AEE39AD2AF2597000982261 /* radishes.png */,
+				5AEE39A32AF2596F00982261 /* salad.png */,
+				5AEE39A92AF2596F00982261 /* spinach.png */,
+				5AEE39A02AF2596F00982261 /* tomatoes.png */,
+				5AEE39A82AF2596F00982261 /* watermelons.png */,
+				5AEE39A52AF2596F00982261 /* zucchini.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5A3296072AEC43B2004E5336 = {
+			isa = PBXGroup;
+			children = (
+				5A3296122AEC43B3004E5336 /* Rain radar */,
+				5A3296232AEC43B6004E5336 /* Rain radarTests */,
+				5A32962D2AEC43B6004E5336 /* Rain radarUITests */,
+				5A3296112AEC43B3004E5336 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5A3296112AEC43B3004E5336 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5A3296102AEC43B3004E5336 /* Rain radar.app */,
+				5A3296202AEC43B6004E5336 /* Rain radarTests.xctest */,
+				5A32962A2AEC43B6004E5336 /* Rain radarUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5A3296122AEC43B3004E5336 /* Rain radar */ = {
+			isa = PBXGroup;
+			children = (
+				5A22A7432AF1858E00DD5869 /* Resources */,
+				5AF8ACC92AED52C20080BB18 /* Model */,
+				5A32963F2AEC4580004E5336 /* Views */,
+				5A3296132AEC43B3004E5336 /* Rain_radarApp.swift */,
+				5A3296152AEC43B3004E5336 /* ContentView.swift */,
+				5A3296172AEC43B5004E5336 /* Assets.xcassets */,
+				5A3296192AEC43B5004E5336 /* Preview Content */,
+			);
+			path = "Rain radar";
+			sourceTree = "<group>";
+		};
+		5A3296192AEC43B5004E5336 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5A32961A2AEC43B5004E5336 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5A3296232AEC43B6004E5336 /* Rain radarTests */ = {
+			isa = PBXGroup;
+			children = (
+				5A3296242AEC43B6004E5336 /* Rain_radarTests.swift */,
+			);
+			path = "Rain radarTests";
+			sourceTree = "<group>";
+		};
+		5A32962D2AEC43B6004E5336 /* Rain radarUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5A32962E2AEC43B6004E5336 /* Rain_radarUITests.swift */,
+				5A3296302AEC43B6004E5336 /* Rain_radarUITestsLaunchTests.swift */,
+			);
+			path = "Rain radarUITests";
+			sourceTree = "<group>";
+		};
+		5A32963F2AEC4580004E5336 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5A32963D2AEC4579004E5336 /* WeatherCard.swift */,
+				5A3296402AEC5D0B004E5336 /* WeatherOverviewSegment.swift */,
+				5A3296422AEC73B3004E5336 /* Header.swift */,
+				5A9B155A2AEEB61000561C35 /* SunRiseSunSet.swift */,
+				5A9B155E2AEEDF9700561C35 /* HourlyForecast.swift */,
+				5A9B15642AEF0CAB00561C35 /* LowerHeader.swift */,
+				5A8306FE2AF02E350085DF37 /* PlantAdvice.swift */,
+				5A1FE58E2AF101A100B0342D /* SearchCrop.swift */,
+				5AEE39BE2AF2682B00982261 /* HumBar.swift */,
+				5AEE39C02AF26DD700982261 /* TempBar.swift */,
+				5AEA6C842AFA433500E0A753 /* RainPredictor.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5AF8ACC92AED52C20080BB18 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5AF8ACCA2AED52EC0080BB18 /* Weather.swift */,
+				5A9B155C2AEEBC7B00561C35 /* DayInfo.swift */,
+				5AF8ACCC2AED5D740080BB18 /* ModelData.swift */,
+				5A1FE5902AF1024D00B0342D /* Crop.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5A32960F2AEC43B3004E5336 /* Rain radar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A3296342AEC43B6004E5336 /* Build configuration list for PBXNativeTarget "Rain radar" */;
+			buildPhases = (
+				5A32960C2AEC43B3004E5336 /* Sources */,
+				5A32960D2AEC43B3004E5336 /* Frameworks */,
+				5A32960E2AEC43B3004E5336 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Rain radar";
+			productName = "Rain radar";
+			productReference = 5A3296102AEC43B3004E5336 /* Rain radar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5A32961F2AEC43B6004E5336 /* Rain radarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A3296372AEC43B6004E5336 /* Build configuration list for PBXNativeTarget "Rain radarTests" */;
+			buildPhases = (
+				5A32961C2AEC43B6004E5336 /* Sources */,
+				5A32961D2AEC43B6004E5336 /* Frameworks */,
+				5A32961E2AEC43B6004E5336 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A3296222AEC43B6004E5336 /* PBXTargetDependency */,
+			);
+			name = "Rain radarTests";
+			productName = "Rain radarTests";
+			productReference = 5A3296202AEC43B6004E5336 /* Rain radarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5A3296292AEC43B6004E5336 /* Rain radarUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A32963A2AEC43B6004E5336 /* Build configuration list for PBXNativeTarget "Rain radarUITests" */;
+			buildPhases = (
+				5A3296262AEC43B6004E5336 /* Sources */,
+				5A3296272AEC43B6004E5336 /* Frameworks */,
+				5A3296282AEC43B6004E5336 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A32962C2AEC43B6004E5336 /* PBXTargetDependency */,
+			);
+			name = "Rain radarUITests";
+			productName = "Rain radarUITests";
+			productReference = 5A32962A2AEC43B6004E5336 /* Rain radarUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5A3296082AEC43B2004E5336 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					5A32960F2AEC43B3004E5336 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					5A32961F2AEC43B6004E5336 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 5A32960F2AEC43B3004E5336;
+					};
+					5A3296292AEC43B6004E5336 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 5A32960F2AEC43B3004E5336;
+					};
+				};
+			};
+			buildConfigurationList = 5A32960B2AEC43B2004E5336 /* Build configuration list for PBXProject "Rain radar" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5A3296072AEC43B2004E5336;
+			productRefGroup = 5A3296112AEC43B3004E5336 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5A32960F2AEC43B3004E5336 /* Rain radar */,
+				5A32961F2AEC43B6004E5336 /* Rain radarTests */,
+				5A3296292AEC43B6004E5336 /* Rain radarUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5A32960E2AEC43B3004E5336 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AEE39B52AF2597000982261 /* potatoes.png in Resources */,
+				5AEE39B22AF2597000982261 /* cucumbers.png in Resources */,
+				5AEE39BB2AF2597000982261 /* radishes.png in Resources */,
+				5AD457A22AFBD7EA00E67415 /* suntimesimple.png in Resources */,
+				5A32961B2AEC43B5004E5336 /* Preview Assets.xcassets in Resources */,
+				5AEE39BA2AF2597000982261 /* peppers.png in Resources */,
+				5AEE39B62AF2597000982261 /* watermelons.png in Resources */,
+				5AEE39B72AF2597000982261 /* spinach.png in Resources */,
+				5AEE39B42AF2597000982261 /* beetroot.png in Resources */,
+				5A3296182AEC43B5004E5336 /* Assets.xcassets in Resources */,
+				5AEE39AE2AF2597000982261 /* tomatoes.png in Resources */,
+				5AEE39B32AF2597000982261 /* zucchini.png in Resources */,
+				5AEE39AF2AF2597000982261 /* onion.png in Resources */,
+				5AEE39B82AF2597000982261 /* pumpkins.png in Resources */,
+				5AEE39BD2AF25AC900982261 /* carrots.png in Resources */,
+				5AEE39B92AF2597000982261 /* corn.png in Resources */,
+				5AEE39B02AF2597000982261 /* eggplants.png in Resources */,
+				5AEE39B12AF2597000982261 /* salad.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A32961E2AEC43B6004E5336 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A3296282AEC43B6004E5336 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5A32960C2AEC43B3004E5336 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A3296432AEC73B3004E5336 /* Header.swift in Sources */,
+				5A9B155B2AEEB61000561C35 /* SunRiseSunSet.swift in Sources */,
+				5A3296162AEC43B3004E5336 /* ContentView.swift in Sources */,
+				5AEE39C12AF26DD700982261 /* TempBar.swift in Sources */,
+				5A8306FF2AF02E350085DF37 /* PlantAdvice.swift in Sources */,
+				5A9B155D2AEEBC7B00561C35 /* DayInfo.swift in Sources */,
+				5A32963E2AEC4579004E5336 /* WeatherCard.swift in Sources */,
+				5A3296142AEC43B3004E5336 /* Rain_radarApp.swift in Sources */,
+				5AEE39BF2AF2682B00982261 /* HumBar.swift in Sources */,
+				5A1FE5912AF1024D00B0342D /* Crop.swift in Sources */,
+				5AEA6C852AFA433500E0A753 /* RainPredictor.swift in Sources */,
+				5A9B15652AEF0CAB00561C35 /* LowerHeader.swift in Sources */,
+				5A1FE58F2AF101A100B0342D /* SearchCrop.swift in Sources */,
+				5AF8ACCB2AED52EC0080BB18 /* Weather.swift in Sources */,
+				5A9B155F2AEEDF9700561C35 /* HourlyForecast.swift in Sources */,
+				5A3296412AEC5D0B004E5336 /* WeatherOverviewSegment.swift in Sources */,
+				5AF8ACCD2AED5D740080BB18 /* ModelData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A32961C2AEC43B6004E5336 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A3296252AEC43B6004E5336 /* Rain_radarTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A3296262AEC43B6004E5336 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A32962F2AEC43B6004E5336 /* Rain_radarUITests.swift in Sources */,
+				5A3296312AEC43B6004E5336 /* Rain_radarUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5A3296222AEC43B6004E5336 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A32960F2AEC43B3004E5336 /* Rain radar */;
+			targetProxy = 5A3296212AEC43B6004E5336 /* PBXContainerItemProxy */;
+		};
+		5A32962C2AEC43B6004E5336 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A32960F2AEC43B3004E5336 /* Rain radar */;
+			targetProxy = 5A32962B2AEC43B6004E5336 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5A3296322AEC43B6004E5336 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5A3296332AEC43B6004E5336 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5A3296352AEC43B6004E5336 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Rain radar/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fontys.Rain-radar";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5A3296362AEC43B6004E5336 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Rain radar/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fontys.Rain-radar";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5A3296382AEC43B6004E5336 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fontys.Rain-radarTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rain radar.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Rain radar";
+			};
+			name = Debug;
+		};
+		5A3296392AEC43B6004E5336 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fontys.Rain-radarTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rain radar.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Rain radar";
+			};
+			name = Release;
+		};
+		5A32963B2AEC43B6004E5336 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fontys.Rain-radarUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Rain radar";
+			};
+			name = Debug;
+		};
+		5A32963C2AEC43B6004E5336 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fontys.Rain-radarUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Rain radar";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5A32960B2AEC43B2004E5336 /* Build configuration list for PBXProject "Rain radar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A3296322AEC43B6004E5336 /* Debug */,
+				5A3296332AEC43B6004E5336 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A3296342AEC43B6004E5336 /* Build configuration list for PBXNativeTarget "Rain radar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A3296352AEC43B6004E5336 /* Debug */,
+				5A3296362AEC43B6004E5336 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A3296372AEC43B6004E5336 /* Build configuration list for PBXNativeTarget "Rain radarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A3296382AEC43B6004E5336 /* Debug */,
+				5A3296392AEC43B6004E5336 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A32963A2AEC43B6004E5336 /* Build configuration list for PBXNativeTarget "Rain radarUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A32963B2AEC43B6004E5336 /* Debug */,
+				5A32963C2AEC43B6004E5336 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5A3296082AEC43B2004E5336 /* Project object */;
+}
