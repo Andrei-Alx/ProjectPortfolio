@@ -1,0 +1,687 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5A1BBEB12AEACE0E00976EB9 /* LightTaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1BBEB02AEACE0E00976EB9 /* LightTaker.swift */; };
+		5A9544BA2AE03DD200E6358A /* MusicCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9544B92AE03DD200E6358A /* MusicCard.swift */; };
+		5AAD7A7D2AE1222E003777F1 /* MusicList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAD7A7C2AE1222E003777F1 /* MusicList.swift */; };
+		5AAD7A802AE122C2003777F1 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAD7A7F2AE122C2003777F1 /* ModelData.swift */; };
+		5AAD7A822AE12429003777F1 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAD7A812AE12429003777F1 /* Music.swift */; };
+		5AB2B7602ADD50B800C58BE2 /* ReactiveSoundscapeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB2B75F2ADD50B800C58BE2 /* ReactiveSoundscapeApp.swift */; };
+		5AB2B7622ADD50B800C58BE2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB2B7612ADD50B800C58BE2 /* ContentView.swift */; };
+		5AB2B7642ADD50BA00C58BE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AB2B7632ADD50BA00C58BE2 /* Assets.xcassets */; };
+		5AB2B7672ADD50BA00C58BE2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AB2B7662ADD50BA00C58BE2 /* Preview Assets.xcassets */; };
+		5AB2B7712ADD50BA00C58BE2 /* ReactiveSoundscapeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB2B7702ADD50BA00C58BE2 /* ReactiveSoundscapeTests.swift */; };
+		5AB2B77B2ADD50BA00C58BE2 /* ReactiveSoundscapeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB2B77A2ADD50BA00C58BE2 /* ReactiveSoundscapeUITests.swift */; };
+		5AB2B77D2ADD50BA00C58BE2 /* ReactiveSoundscapeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB2B77C2ADD50BA00C58BE2 /* ReactiveSoundscapeUITestsLaunchTests.swift */; };
+		5AB642392AE866C8000C3021 /* MoodPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB642382AE866C8000C3021 /* MoodPicker.swift */; };
+		5AB6423E2AE87B03000C3021 /* Aesthetics.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5AB6423A2AE87B01000C3021 /* Aesthetics.mp3 */; };
+		5AB6423F2AE87B03000C3021 /* Happy guitar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5AB6423B2AE87B02000C3021 /* Happy guitar.mp3 */; };
+		5AB642402AE87B03000C3021 /* Soothing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5AB6423C2AE87B02000C3021 /* Soothing.mp3 */; };
+		5AB642412AE87B03000C3021 /* Calming.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5AB6423D2AE87B02000C3021 /* Calming.mp3 */; };
+		5AFC746E2AE6BD050007BA5A /* Good-night.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5AFC74672AE6BD050007BA5A /* Good-night.mp3 */; };
+		5AFC746F2AE6BD050007BA5A /* Lofi-study.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5AFC74682AE6BD050007BA5A /* Lofi-study.mp3 */; };
+		5AFC74702AE6BD050007BA5A /* Calm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5AFC74692AE6BD050007BA5A /* Calm.mp3 */; };
+		5AFC74712AE6BD050007BA5A /* Chill mix.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5AFC746A2AE6BD050007BA5A /* Chill mix.mp3 */; };
+		5AFC74732AE6BD050007BA5A /* Relaxing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5AFC746C2AE6BD050007BA5A /* Relaxing.mp3 */; };
+		5AFC74742AE6BD050007BA5A /* Piano chill.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5AFC746D2AE6BD050007BA5A /* Piano chill.mp3 */; };
+		5AFC74782AE6C0A30007BA5A /* musicData.json in Resources */ = {isa = PBXBuildFile; fileRef = 5AFC74772AE6C0A30007BA5A /* musicData.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5AB2B76D2ADD50BA00C58BE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5AB2B7542ADD50B800C58BE2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5AB2B75B2ADD50B800C58BE2;
+			remoteInfo = ReactiveSoundscape;
+		};
+		5AB2B7772ADD50BA00C58BE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5AB2B7542ADD50B800C58BE2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5AB2B75B2ADD50B800C58BE2;
+			remoteInfo = ReactiveSoundscape;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5A1BBEB02AEACE0E00976EB9 /* LightTaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightTaker.swift; sourceTree = "<group>"; };
+		5A9544B92AE03DD200E6358A /* MusicCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCard.swift; sourceTree = "<group>"; };
+		5AAD7A7C2AE1222E003777F1 /* MusicList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicList.swift; sourceTree = "<group>"; };
+		5AAD7A7F2AE122C2003777F1 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		5AAD7A812AE12429003777F1 /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
+		5AB2B75C2ADD50B800C58BE2 /* ReactiveSoundscape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveSoundscape.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AB2B75F2ADD50B800C58BE2 /* ReactiveSoundscapeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveSoundscapeApp.swift; sourceTree = "<group>"; };
+		5AB2B7612ADD50B800C58BE2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5AB2B7632ADD50BA00C58BE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5AB2B7662ADD50BA00C58BE2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5AB2B76C2ADD50BA00C58BE2 /* ReactiveSoundscapeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactiveSoundscapeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AB2B7702ADD50BA00C58BE2 /* ReactiveSoundscapeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveSoundscapeTests.swift; sourceTree = "<group>"; };
+		5AB2B7762ADD50BA00C58BE2 /* ReactiveSoundscapeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactiveSoundscapeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AB2B77A2ADD50BA00C58BE2 /* ReactiveSoundscapeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveSoundscapeUITests.swift; sourceTree = "<group>"; };
+		5AB2B77C2ADD50BA00C58BE2 /* ReactiveSoundscapeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveSoundscapeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5AB642382AE866C8000C3021 /* MoodPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodPicker.swift; sourceTree = "<group>"; };
+		5AB6423A2AE87B01000C3021 /* Aesthetics.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Aesthetics.mp3; sourceTree = "<group>"; };
+		5AB6423B2AE87B02000C3021 /* Happy guitar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Happy guitar.mp3"; sourceTree = "<group>"; };
+		5AB6423C2AE87B02000C3021 /* Soothing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Soothing.mp3; sourceTree = "<group>"; };
+		5AB6423D2AE87B02000C3021 /* Calming.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Calming.mp3; sourceTree = "<group>"; };
+		5AD4D24D2AE99C720085D17E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		5AFC74672AE6BD050007BA5A /* Good-night.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Good-night.mp3"; sourceTree = "<group>"; };
+		5AFC74682AE6BD050007BA5A /* Lofi-study.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Lofi-study.mp3"; sourceTree = "<group>"; };
+		5AFC74692AE6BD050007BA5A /* Calm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Calm.mp3; sourceTree = "<group>"; };
+		5AFC746A2AE6BD050007BA5A /* Chill mix.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Chill mix.mp3"; sourceTree = "<group>"; };
+		5AFC746C2AE6BD050007BA5A /* Relaxing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Relaxing.mp3; sourceTree = "<group>"; };
+		5AFC746D2AE6BD050007BA5A /* Piano chill.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Piano chill.mp3"; sourceTree = "<group>"; };
+		5AFC74772AE6C0A30007BA5A /* musicData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = musicData.json; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5AB2B7592ADD50B800C58BE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AB2B7692ADD50BA00C58BE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AB2B7732ADD50BA00C58BE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5AAD7A7E2AE12291003777F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5AAD7A7F2AE122C2003777F1 /* ModelData.swift */,
+				5AAD7A812AE12429003777F1 /* Music.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5AB2B7532ADD50B800C58BE2 = {
+			isa = PBXGroup;
+			children = (
+				5AB2B75E2ADD50B800C58BE2 /* ReactiveSoundscape */,
+				5AB2B76F2ADD50BA00C58BE2 /* ReactiveSoundscapeTests */,
+				5AB2B7792ADD50BA00C58BE2 /* ReactiveSoundscapeUITests */,
+				5AB2B75D2ADD50B800C58BE2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5AB2B75D2ADD50B800C58BE2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5AB2B75C2ADD50B800C58BE2 /* ReactiveSoundscape.app */,
+				5AB2B76C2ADD50BA00C58BE2 /* ReactiveSoundscapeTests.xctest */,
+				5AB2B7762ADD50BA00C58BE2 /* ReactiveSoundscapeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5AB2B75E2ADD50B800C58BE2 /* ReactiveSoundscape */ = {
+			isa = PBXGroup;
+			children = (
+				5AD4D24D2AE99C720085D17E /* Info.plist */,
+				5AAD7A7E2AE12291003777F1 /* Model */,
+				5AB65B4A2AE0082100392EE9 /* Resources */,
+				5AB65B472AE005EB00392EE9 /* Views */,
+				5AB2B75F2ADD50B800C58BE2 /* ReactiveSoundscapeApp.swift */,
+				5AB2B7612ADD50B800C58BE2 /* ContentView.swift */,
+				5AB2B7632ADD50BA00C58BE2 /* Assets.xcassets */,
+				5AB2B7652ADD50BA00C58BE2 /* Preview Content */,
+			);
+			path = ReactiveSoundscape;
+			sourceTree = "<group>";
+		};
+		5AB2B7652ADD50BA00C58BE2 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5AB2B7662ADD50BA00C58BE2 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5AB2B76F2ADD50BA00C58BE2 /* ReactiveSoundscapeTests */ = {
+			isa = PBXGroup;
+			children = (
+				5AB2B7702ADD50BA00C58BE2 /* ReactiveSoundscapeTests.swift */,
+			);
+			path = ReactiveSoundscapeTests;
+			sourceTree = "<group>";
+		};
+		5AB2B7792ADD50BA00C58BE2 /* ReactiveSoundscapeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5AB2B77A2ADD50BA00C58BE2 /* ReactiveSoundscapeUITests.swift */,
+				5AB2B77C2ADD50BA00C58BE2 /* ReactiveSoundscapeUITestsLaunchTests.swift */,
+			);
+			path = ReactiveSoundscapeUITests;
+			sourceTree = "<group>";
+		};
+		5AB65B472AE005EB00392EE9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5A9544B92AE03DD200E6358A /* MusicCard.swift */,
+				5AAD7A7C2AE1222E003777F1 /* MusicList.swift */,
+				5AB642382AE866C8000C3021 /* MoodPicker.swift */,
+				5A1BBEB02AEACE0E00976EB9 /* LightTaker.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5AB65B4A2AE0082100392EE9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5AFC74692AE6BD050007BA5A /* Calm.mp3 */,
+				5AFC746A2AE6BD050007BA5A /* Chill mix.mp3 */,
+				5AFC74672AE6BD050007BA5A /* Good-night.mp3 */,
+				5AFC74682AE6BD050007BA5A /* Lofi-study.mp3 */,
+				5AFC746D2AE6BD050007BA5A /* Piano chill.mp3 */,
+				5AFC746C2AE6BD050007BA5A /* Relaxing.mp3 */,
+				5AB6423A2AE87B01000C3021 /* Aesthetics.mp3 */,
+				5AB6423D2AE87B02000C3021 /* Calming.mp3 */,
+				5AB6423B2AE87B02000C3021 /* Happy guitar.mp3 */,
+				5AB6423C2AE87B02000C3021 /* Soothing.mp3 */,
+				5AFC74772AE6C0A30007BA5A /* musicData.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5AB2B75B2ADD50B800C58BE2 /* ReactiveSoundscape */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AB2B7802ADD50BA00C58BE2 /* Build configuration list for PBXNativeTarget "ReactiveSoundscape" */;
+			buildPhases = (
+				5AB2B7582ADD50B800C58BE2 /* Sources */,
+				5AB2B7592ADD50B800C58BE2 /* Frameworks */,
+				5AB2B75A2ADD50B800C58BE2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReactiveSoundscape;
+			productName = ReactiveSoundscape;
+			productReference = 5AB2B75C2ADD50B800C58BE2 /* ReactiveSoundscape.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5AB2B76B2ADD50BA00C58BE2 /* ReactiveSoundscapeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AB2B7832ADD50BA00C58BE2 /* Build configuration list for PBXNativeTarget "ReactiveSoundscapeTests" */;
+			buildPhases = (
+				5AB2B7682ADD50BA00C58BE2 /* Sources */,
+				5AB2B7692ADD50BA00C58BE2 /* Frameworks */,
+				5AB2B76A2ADD50BA00C58BE2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5AB2B76E2ADD50BA00C58BE2 /* PBXTargetDependency */,
+			);
+			name = ReactiveSoundscapeTests;
+			productName = ReactiveSoundscapeTests;
+			productReference = 5AB2B76C2ADD50BA00C58BE2 /* ReactiveSoundscapeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5AB2B7752ADD50BA00C58BE2 /* ReactiveSoundscapeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AB2B7862ADD50BA00C58BE2 /* Build configuration list for PBXNativeTarget "ReactiveSoundscapeUITests" */;
+			buildPhases = (
+				5AB2B7722ADD50BA00C58BE2 /* Sources */,
+				5AB2B7732ADD50BA00C58BE2 /* Frameworks */,
+				5AB2B7742ADD50BA00C58BE2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5AB2B7782ADD50BA00C58BE2 /* PBXTargetDependency */,
+			);
+			name = ReactiveSoundscapeUITests;
+			productName = ReactiveSoundscapeUITests;
+			productReference = 5AB2B7762ADD50BA00C58BE2 /* ReactiveSoundscapeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5AB2B7542ADD50B800C58BE2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					5AB2B75B2ADD50B800C58BE2 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					5AB2B76B2ADD50BA00C58BE2 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 5AB2B75B2ADD50B800C58BE2;
+					};
+					5AB2B7752ADD50BA00C58BE2 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 5AB2B75B2ADD50B800C58BE2;
+					};
+				};
+			};
+			buildConfigurationList = 5AB2B7572ADD50B800C58BE2 /* Build configuration list for PBXProject "ReactiveSoundscape" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5AB2B7532ADD50B800C58BE2;
+			productRefGroup = 5AB2B75D2ADD50B800C58BE2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5AB2B75B2ADD50B800C58BE2 /* ReactiveSoundscape */,
+				5AB2B76B2ADD50BA00C58BE2 /* ReactiveSoundscapeTests */,
+				5AB2B7752ADD50BA00C58BE2 /* ReactiveSoundscapeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5AB2B75A2ADD50B800C58BE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AFC74742AE6BD050007BA5A /* Piano chill.mp3 in Resources */,
+				5AB642402AE87B03000C3021 /* Soothing.mp3 in Resources */,
+				5AB2B7672ADD50BA00C58BE2 /* Preview Assets.xcassets in Resources */,
+				5AFC74732AE6BD050007BA5A /* Relaxing.mp3 in Resources */,
+				5AFC74702AE6BD050007BA5A /* Calm.mp3 in Resources */,
+				5AB6423F2AE87B03000C3021 /* Happy guitar.mp3 in Resources */,
+				5AFC746F2AE6BD050007BA5A /* Lofi-study.mp3 in Resources */,
+				5AB2B7642ADD50BA00C58BE2 /* Assets.xcassets in Resources */,
+				5AB642412AE87B03000C3021 /* Calming.mp3 in Resources */,
+				5AFC746E2AE6BD050007BA5A /* Good-night.mp3 in Resources */,
+				5AFC74782AE6C0A30007BA5A /* musicData.json in Resources */,
+				5AFC74712AE6BD050007BA5A /* Chill mix.mp3 in Resources */,
+				5AB6423E2AE87B03000C3021 /* Aesthetics.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AB2B76A2ADD50BA00C58BE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AB2B7742ADD50BA00C58BE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5AB2B7582ADD50B800C58BE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AB2B7622ADD50B800C58BE2 /* ContentView.swift in Sources */,
+				5A1BBEB12AEACE0E00976EB9 /* LightTaker.swift in Sources */,
+				5A9544BA2AE03DD200E6358A /* MusicCard.swift in Sources */,
+				5AB642392AE866C8000C3021 /* MoodPicker.swift in Sources */,
+				5AAD7A802AE122C2003777F1 /* ModelData.swift in Sources */,
+				5AB2B7602ADD50B800C58BE2 /* ReactiveSoundscapeApp.swift in Sources */,
+				5AAD7A7D2AE1222E003777F1 /* MusicList.swift in Sources */,
+				5AAD7A822AE12429003777F1 /* Music.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AB2B7682ADD50BA00C58BE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AB2B7712ADD50BA00C58BE2 /* ReactiveSoundscapeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AB2B7722ADD50BA00C58BE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AB2B77D2ADD50BA00C58BE2 /* ReactiveSoundscapeUITestsLaunchTests.swift in Sources */,
+				5AB2B77B2ADD50BA00C58BE2 /* ReactiveSoundscapeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5AB2B76E2ADD50BA00C58BE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5AB2B75B2ADD50B800C58BE2 /* ReactiveSoundscape */;
+			targetProxy = 5AB2B76D2ADD50BA00C58BE2 /* PBXContainerItemProxy */;
+		};
+		5AB2B7782ADD50BA00C58BE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5AB2B75B2ADD50B800C58BE2 /* ReactiveSoundscape */;
+			targetProxy = 5AB2B7772ADD50BA00C58BE2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5AB2B77E2ADD50BA00C58BE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5AB2B77F2ADD50BA00C58BE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5AB2B7812ADD50BA00C58BE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ReactiveSoundscape/Preview Content\"";
+				DEVELOPMENT_TEAM = XMF75J4CGZ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ReactiveSoundscape/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need camera access to analyse your mood";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fontys.ReactiveSoundscape;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5AB2B7822ADD50BA00C58BE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ReactiveSoundscape/Preview Content\"";
+				DEVELOPMENT_TEAM = XMF75J4CGZ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ReactiveSoundscape/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need camera access to analyse your mood";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fontys.ReactiveSoundscape;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5AB2B7842ADD50BA00C58BE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fontys.ReactiveSoundscapeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReactiveSoundscape.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ReactiveSoundscape";
+			};
+			name = Debug;
+		};
+		5AB2B7852ADD50BA00C58BE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fontys.ReactiveSoundscapeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReactiveSoundscape.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ReactiveSoundscape";
+			};
+			name = Release;
+		};
+		5AB2B7872ADD50BA00C58BE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fontys.ReactiveSoundscapeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ReactiveSoundscape;
+			};
+			name = Debug;
+		};
+		5AB2B7882ADD50BA00C58BE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fontys.ReactiveSoundscapeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ReactiveSoundscape;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5AB2B7572ADD50B800C58BE2 /* Build configuration list for PBXProject "ReactiveSoundscape" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AB2B77E2ADD50BA00C58BE2 /* Debug */,
+				5AB2B77F2ADD50BA00C58BE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5AB2B7802ADD50BA00C58BE2 /* Build configuration list for PBXNativeTarget "ReactiveSoundscape" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AB2B7812ADD50BA00C58BE2 /* Debug */,
+				5AB2B7822ADD50BA00C58BE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5AB2B7832ADD50BA00C58BE2 /* Build configuration list for PBXNativeTarget "ReactiveSoundscapeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AB2B7842ADD50BA00C58BE2 /* Debug */,
+				5AB2B7852ADD50BA00C58BE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5AB2B7862ADD50BA00C58BE2 /* Build configuration list for PBXNativeTarget "ReactiveSoundscapeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AB2B7872ADD50BA00C58BE2 /* Debug */,
+				5AB2B7882ADD50BA00C58BE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5AB2B7542ADD50B800C58BE2 /* Project object */;
+}

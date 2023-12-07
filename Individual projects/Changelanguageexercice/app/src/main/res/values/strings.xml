@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name" translatable="false">Change language exercice</string>
+    <string name="cool_picture">Cool picture</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula felis in justo porta, sit amet tempor libero suscipit.Nullam euismod neque id sapien vestibulum, nec efficitur velit fringilla.</string>
+    <string name="mark_as_favorite">Mark as favorite</string>
+    <string name="share">Share</string>
+</resources>

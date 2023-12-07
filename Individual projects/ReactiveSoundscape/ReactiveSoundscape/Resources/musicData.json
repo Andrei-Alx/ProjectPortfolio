@@ -1,0 +1,62 @@
+[
+    {
+        "id": 0,
+        "name": "Lofi-study",
+        "duration": 147,
+        "category": "Sad"
+    },
+    {
+        "id": 1,
+        "name": "Piano chill",
+        "duration": 217,
+        "category": "Relax"
+    },
+    {
+        "id": 2,
+        "name": "Relaxing",
+        "duration": 1312,
+        "category": "Relax"
+    },
+    {
+        "id": 3,
+        "name": "Good-night",
+        "duration": 147,
+        "category": "Sleep"
+    },
+    {
+        "id": 4,
+        "name": "Calm",
+        "duration": 175,
+        "category": "Sleep"
+    },
+    {
+        "id": 5,
+        "name": "Chill mix",
+        "duration": 1358,
+        "category": "Sad"
+    },
+    {
+        "id": 6,
+        "name": "Happy guitar",
+        "duration": 194,
+        "category": "Happy"
+    },
+    {
+        "id": 7,
+        "name": "Aesthetics",
+        "duration": 126,
+        "category": "Happy"
+    },
+    {
+        "id": 8,
+        "name": "Calming",
+        "duration": 312,
+        "category": "Angry"
+    },
+    {
+        "id": 9,
+        "name": "Soothing",
+        "duration": 103,
+        "category": "Angry"
+    },
+]
